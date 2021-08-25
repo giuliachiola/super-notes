@@ -9,10 +9,7 @@ Description
 | Project typology | Personal/Work/Step by step from tutorial                                                                                                                                                               |
 
 ![project preview](https://thumbs.dreamstime.com/b/white-cat-paws-window-detail-white-front-cat-paws-window-detail-hair-claws-107979469.jpg)
-
-<!--
 ![project preview](docs/project-preview.png)
--->
 
 ## 🔥 Tech stack
 
