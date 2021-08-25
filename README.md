@@ -2,11 +2,11 @@
 
 Personal tech notes, not always well organized 😇
 
-| \                | \                                                                                                                                                                      |
-|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Pipeline         | [![Netlify Status](https://api.netlify.com/api/v1/badges/418bc946-0474-46c4-9bc3-48031743a7ef/deploy-status)](https://app.netlify.com/sites/blog-giuliachiola/deploys) |
-| Deploy preview   | deploylink                                                                                                                                                             |
-| Project typology | Personal                                                                                                                                                               |
+| \                | \                                                                                                                                                                             |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Pipeline         | [![Netlify Status](https://api.netlify.com/api/v1/badges/3e252c8b-cf42-44c9-b64b-0bb252ea63d1/deploy-status)](https://app.netlify.com/sites/super-notes-giuliachiola/deploys) |
+| Deploy preview   | https://super-notes-giuliachiola.netlify.app/#/                                                                                                                               |
+| Project typology | Personal                                                                                                                                                                      |
 
 ![project preview](docs/project-preview.png)
 
