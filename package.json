@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+ssh://git@gitlab.com/giuliach/super-notes.git"
   },
-  "author": "",
+  "author": "Giulia Chiola",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/giuliach/super-notes/issues"
