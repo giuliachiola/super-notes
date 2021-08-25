@@ -1,0 +1,61 @@
+  - aem
+    - [aem architecture](/docs/aem/aem-architecture.md)
+  - chrome
+    - [chrome](/docs/chrome/chrome.md)
+  - config
+    - [config](/docs/config/config.md)
+  - craft cms
+    - [craft cms 2018](/docs/craft-cms/craft-cms-2018.md)
+    - [craft cms 2020](/docs/craft-cms/craft-cms-2020.md)
+    - [nitro](/docs/craft-cms/nitro.md)
+  - css
+    - [css](/docs/css/css.md)
+    - [food colors](/docs/css/food-colors.md)
+  - design
+    - [sketch](/docs/design/sketch.md)
+  - [generate automatic sidebar](/docs/generate-automatic-sidebar.md)
+  - git
+    - [git shortcuts](/docs/git/git-shortcuts.md)
+    - [git to review](/docs/git/git-to-review.md)
+    - [git](/docs/git/git.md)
+    - [gitlab colors](/docs/git/gitlab-colors.md)
+    - [gitlab projects migration](/docs/git/gitlab-projects-migration.md)
+    - [project readme](/docs/git/project-readme.md)
+  - html
+    - [html](/docs/html/html.md)
+  - images
+    - [responsive images 101](/docs/images/responsive-images-101.md)
+  - javascript
+    - [js es6](/docs/javascript/js-es6.md)
+  - mac os
+    - [mac headset](/docs/mac-os/mac-headset.md)
+    - [mac os](/docs/mac-os/mac-os.md)
+  - pattern libraries
+    - [fractal setup](/docs/pattern-libraries/fractal-setup.md)
+    - [pattern libraries compare](/docs/pattern-libraries/pattern-libraries-compare.md)
+    - [uiengine](/docs/pattern-libraries/uiengine.md)
+  - performance
+    - [performance](/docs/performance/performance.md)
+  - project management
+    - [project management](/docs/project-management/project-management.md)
+  - react
+    - [react](/docs/react/react.md)
+  - regex
+    - [regex](/docs/regex/regex.md)
+  - shell
+    - [chmod](/docs/shell/chmod.md)
+    - [env](/docs/shell/env.md)
+    - [homebrew](/docs/shell/homebrew.md)
+    - [node](/docs/shell/node.md)
+    - [npm](/docs/shell/npm.md)
+    - [oh my zsh](/docs/shell/oh-my-zsh.md)
+    - [shell](/docs/shell/shell.md)
+  - template engines
+    - [mustache](/docs/template-engines/mustache.md)
+    - [nunjucks](/docs/template-engines/nunjucks.md)
+    - [twig](/docs/template-engines/twig.md)
+  - visual studio code
+    - [config](/docs/visual-studio-code/config.md)
+    - [shortcuts](/docs/visual-studio-code/shortcuts.md)
+  - vuejs
+    - [vue js](/docs/vuejs/vue-js.md)

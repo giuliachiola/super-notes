@@ -1,0 +1,28 @@
+{
+  "name": "super-notes",
+  "version": "1.0.0",
+  "description": "super notes",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx docsify serve ."
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "docsify-tools": "^1.0.20"
+  },
+  "devDependencies": {
+    "docsify-cli": "^4.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/giuliach/super-notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/giuliach/super-notes/issues"
+  },
+  "homepage": "https://gitlab.com/giuliach/super-notes#readme"
+}
