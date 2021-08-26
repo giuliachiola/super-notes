@@ -4,9 +4,9 @@ Description
 
 | \                | \                                                                                                                                                                      |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Pipeline         | [![Netlify Status](https://api.netlify.com/api/v1/badges/418bc946-0474-46c4-9bc3-48031743a7ef/deploy-status)](https://app.netlify.com/sites/blog-giuliachiola/deploys) |
+| Deploy status	         | [![Netlify Status](https://api.netlify.com/api/v1/badges/418bc946-0474-46c4-9bc3-48031743a7ef/deploy-status)](https://app.netlify.com/sites/blog-giuliachiola/deploys) |
 | Deploy preview   | deploylink                                                                                                                                              |
-| Project typology | Personal/Work/Step by step from tutorial                                                                                                                                                               |
+| Project typology | Personal/Step by step from tutorial                                                                                                                                                               |
 
 ![project preview](https://thumbs.dreamstime.com/b/white-cat-paws-window-detail-white-front-cat-paws-window-detail-hair-claws-107979469.jpg)
 ![project preview](docs/project-preview.png)
@@ -45,7 +45,7 @@ npm run build
 
 | Branch name           | Use           |
 |:----------------------|:--------------|
-| `main`                | deploy        |
+| `main`                | production    |
 | `develop`             | main feature  |
 
 ## 🧨 Useful resources
