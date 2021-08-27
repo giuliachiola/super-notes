@@ -1,16 +1,3 @@
-# Egghead.io beginner React course
-
-https://egghead.io/courses/the-beginner-s-guide-to-react
-
-## Lesson 01-02 | A Beginners Guide to React Introduction
-
-- `npx` is bounded with `npm`
-- run a local server:
-
-```shell
-npx browser-sync start --server --files "./*.html" --no-open --no-notify --directory
-```
-
 ## Lesson 03 | Create a User Interface with React’s createElement API
 
 https://egghead.io/lessons/react-create-a-user-interface-with-react-s-createelement-api
@@ -33,7 +20,7 @@ Create DOM nodes in a classic way VS using React
 
 - classic way
 
-```jsx
+```js
 const rootElement = document.getElementById("root");
 const element = document.createElement("div");
 element.textContent = "Hello World";
@@ -86,6 +73,3 @@ const element = React.createElement ('div', {
   className: 'container'
 })
 ```
-
-## Lesson 04 | Create a User Interface with React’s JSX syntax
-
