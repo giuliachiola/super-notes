@@ -1,7 +1,7 @@
 
-## Lesson 04 | Create a User Interface with React’s JSX syntax
+# JSX syntax
 
-This is *NOT* JavaScript code, but it is JSX 
+This is *NOT* JavaScript code, but it is JSX
 
 ```jsx
 const element = <div className="container">Hello World</div>;
@@ -13,7 +13,7 @@ but the browser will not understand this ^^ and will throw an error like
 Uncaught SyntaxError: Unexpected token '<'
 ```
 
-Babel comes in our support to transpile JSX to something comphrensible by the browser: 
+Babel comes in our support to transpile JSX to something comphrensible by the browser:
 
 [Babel transpile](https://babeljs.io/repl/#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=MYewdgzgLgBApgGzgWzmWBeGAeAJgSwDcZgEBDCCAOTNQwCJR0z8w4AnegPgAlEEQMAOoh2CXNgD0BQlwDcQA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Creact&prettier=false&targets=&version=7.15.3&externalPlugins=&assumptions=%7B%7D)
 
@@ -52,7 +52,7 @@ So if we want to use Babel on the fly in the browser, we have to use
 
 but keep in mind that use Babel in the browser on the fly drastically slow down your application.
 
-## Lesson 04 | Create a User Interface with React’s JSX syntax
+## Interpolation
 
 Interpolation: everything between curly braces should be a JavaScript expression, that will be evaluated and its resulting value will be used in its current position.
 
@@ -73,7 +73,7 @@ const element = <div className={className}>{children}</div>
 ReactDOM.render(element, rootElement)
 ```
 
-### The `children` prop
+## The `children` prop
 
 1. Pass `children` in this way
 
@@ -104,7 +104,7 @@ var element = React.createElement("div", {
 })
 ```
 
-### JSX syntax
+## Notes about JSX
 
 Self-closing `<div>` tag e.g.
 

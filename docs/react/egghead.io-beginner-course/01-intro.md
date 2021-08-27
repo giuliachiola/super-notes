@@ -2,7 +2,7 @@
 
 https://egghead.io/courses/the-beginner-s-guide-to-react
 
-## Lesson 01-02 | A Beginners Guide to React Introduction
+## How to run the project
 
 - `npx` is bounded with `npm`
 - run a local server:

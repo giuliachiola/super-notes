@@ -1,4 +1,4 @@
-## Lesson 03 | Create a User Interface with React’s createElement API
+# Create a React element
 
 https://egghead.io/lessons/react-create-a-user-interface-with-react-s-createelement-api
 
@@ -11,7 +11,7 @@ https://egghead.io/lessons/react-create-a-user-interface-with-react-s-createelem
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
 
   <script type="text/javascript">
-    // write JS here 
+    // write JS here
   </script>
 </body>
 ```
