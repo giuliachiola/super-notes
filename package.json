@@ -4,6 +4,7 @@
   "description": "super notes",
   "main": "index.js",
   "scripts": {
+    "auto-sidebar": "npx docsify-auto-sidebar -d docs",
     "dev": "npx docsify serve ."
   },
   "directories": {

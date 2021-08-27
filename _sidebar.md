@@ -39,6 +39,7 @@
   - project management
     - [project management](/docs/project-management/project-management.md)
   - react
+    - [egghead.io beginner course](/docs/react/egghead.io-beginner-course.md)
     - [react](/docs/react/react.md)
   - regex
     - [regex](/docs/regex/regex.md)
