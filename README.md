@@ -4,7 +4,7 @@ Personal tech notes, not always well organized 😇
 
 | \                | \                                                                                                                                                                             |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Deploy status	         | [![Netlify Status](https://api.netlify.com/api/v1/badges/3e252c8b-cf42-44c9-b64b-0bb252ea63d1/deploy-status)](https://app.netlify.com/sites/super-notes-giuliachiola/deploys) |
+| Deploy status    | [![Netlify Status](https://api.netlify.com/api/v1/badges/3e252c8b-cf42-44c9-b64b-0bb252ea63d1/deploy-status)](https://app.netlify.com/sites/super-notes-giuliachiola/deploys) |
 | Deploy preview   | https://super-notes-giuliachiola.netlify.app/#/                                                                                                                               |
 | Project typology | Personal                                                                                                                                                                      |
 
@@ -41,6 +41,9 @@ npm run build
 
 ### 🌿 Branches
 
-| Branch name | Use        |
-|:------------|:-----------|
-| `main`      | production |
+I use two main branches, to avoid launching too many deploys on Netlify (one at each git push on main).
+
+| Branch name | Use                      |
+|:------------|:-------------------------|
+| `main`      | final docs               |
+| `deploy`    | docs deployed on Netlify |
