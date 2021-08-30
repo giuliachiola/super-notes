@@ -2,6 +2,8 @@
 
 https://egghead.io/courses/the-beginner-s-guide-to-react
 
+[GitHub](https://github.com/kentcdodds/beginners-guide-to-react/tree/egghead)
+
 ## How to run the project
 
 - `npx` is bounded with `npm`
