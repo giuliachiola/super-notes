@@ -12,3 +12,9 @@ https://egghead.io/courses/the-beginner-s-guide-to-react
 ```shell
 npx browser-sync start --server --files "./*.html" --no-open --no-notify --directory
 ```
+
+## Console tips
+
+`$0` = DOM node currently selected
+
+`$r` = information about React component currently selected
