@@ -1,5 +1,7 @@
 # StoryBook
 
+[React Storybook Tutorial - YouTube playlist](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhC-j3x3t9la8-GQJGViDQk)
+
 Create a StoryBook app
 
 ```shell
