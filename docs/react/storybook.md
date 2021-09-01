@@ -95,3 +95,131 @@ export default {
 }
 ...
 ```
+
+We can also add another folder level in this way
+
+```js
+// src/components/input/Input.stories.js
+
+...
+export default {
+  title: 'Form/UI/Input',
+  component: Input,
+}
+...
+```
+
+## Story name
+
+We can change the story name overriding the story label into the sidebar
+
+```js
+// src/components/button/Button.stories.js
+...
+export default {
+  title: 'Button',
+  component: Button,
+}
+
+export const Primary = () => <Button variant='primary'>Primary</Button>
+...
+
+Primary.storyName = 'Primary button label' // this is the label into the sidebar
+```
+
+## Sorting stories
+
+[Check the official docs](https://storybook.js.org/docs/react/writing-stories/naming-components-and-hierarchy#sorting-stories)
+
+
+## Stories within stories
+
+We can import stories within stories
+
+Pros:
+- reduce the amount of code to be written
+- you do not have to pass every props again
+- if you update the main story, the other story will update
+
+```jsx
+import React from 'react'
+import { ButtonPrimary } from '../Button/Button.stories' // stories, not components
+import { InputLarge } from '../Input/Input.stories' // stories, not components
+
+export default function PrimarySubscription() {
+  return (
+    <>
+      <ButtonPrimary />
+      <InputLarge />
+    </>
+  )
+}
+```
+
+## Args
+
+Instead of using render functions in this way
+
+```js
+// src/components/button/Button.stories.js
+...
+export const Primary = () => <Button variant='primary'>Primary text</Button>
+export const Secondary = () => <Button variant='secondary'>Secondary text</Button>
+```
+
+we can use the template `args` (properties) like this
+
+```js
+// src/components/button/Button.stories.js
+...
+const Template = args => <Button {...args} />
+
+export const Primary = Template.bind({})
+Primary.args == {
+  variant: 'primary',
+  children: 'Primary text'
+}
+
+export const Secondary = Template.bind({})
+Secondary.args == {
+  variant: 'secondary',
+  children: 'Secondary text'
+}
+```
+
+pros:
+- the `args` approach is more appropriate to the stories, which represent the UI state of a component and the states are represented by these args objects.
+- reduce the unique code
+- is possible to reuse `args` to another story
+
+```js
+export const LongPrimary = Template.bind({})
+
+LongPrimary.args == {
+  ...Primary.args, // call another state args object
+  children: 'LongPrimary text'
+}
+```
+
+It is possible to set up `args` at component level, to be applied to all the components stories:
+
+```js
+export default {
+  title: 'Form/Button',
+  component: Button,
+  args: { // add 'args' object
+    children: 'Button text!',
+  }
+}
+
+...
+export const Primary = Template.bind({})
+
+export const Primary = Template.bind({})
+Primary.args == {
+  variant: 'primary',
+  // remove `children` from here, it inherited 'Button text!'
+}
+```
+
+Remember that `args` at the story level will override and args at the component level.
