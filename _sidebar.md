@@ -39,8 +39,26 @@
   - project management
     - [project management](/docs/project-management/project-management.md)
   - react
-    - [egghead.io beginner course](/docs/react/egghead.io-beginner-course.md)
+    - egghead.io beginner course
+      - [intro](/docs/react/egghead.io-beginner-course/01-intro.md)
+      - [create element](/docs/react/egghead.io-beginner-course/02-create-element.md)
+      - [jsx](/docs/react/egghead.io-beginner-course/03-jsx.md)
+      - [fragments](/docs/react/egghead.io-beginner-course/04-fragments.md)
+      - [component](/docs/react/egghead.io-beginner-course/05-component.md)
+      - [prop types](/docs/react/egghead.io-beginner-course/06-prop-types.md)
+      - [jsx interpolation](/docs/react/egghead.io-beginner-course/07-jsx-interpolation.md)
+      - [styles](/docs/react/egghead.io-beginner-course/08-styles.md)
+      - [events](/docs/react/egghead.io-beginner-course/09-events.md)
+      - [use state](/docs/react/egghead.io-beginner-course/10-use-state.md)
+      - [use effect](/docs/react/egghead.io-beginner-course/11-use-effect.md)
+      - [ref](/docs/react/egghead.io-beginner-course/12-ref.md)
+      - [form event](/docs/react/egghead.io-beginner-course/13-form-event.md)
+      - [error boundaries](/docs/react/egghead.io-beginner-course/14-error-boundaries.md)
+      - [lift and colocating state](/docs/react/egghead.io-beginner-course/15-lift-and-colocating-state.md)
+      - [http requests](/docs/react/egghead.io-beginner-course/16-http-requests.md)
+    - [react ita to check](/docs/react/react-ita-to-check.md)
     - [react](/docs/react/react.md)
+    - [storybook](/docs/react/storybook.md)
   - regex
     - [regex](/docs/regex/regex.md)
   - shell
