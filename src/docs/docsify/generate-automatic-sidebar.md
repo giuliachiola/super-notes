@@ -16,4 +16,4 @@ node_modules/.bin/docsify-auto-sidebar -d docs
 -->
 
 - move this file in the root folder
-- in `_sidebar.md` replace all `(/` with `(/docs/`
+- in `_sidebar.md` replace all `(/` with `(/src/docs/`
