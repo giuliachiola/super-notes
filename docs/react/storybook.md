@@ -225,3 +225,142 @@ Primary.args == {
 ```
 
 Remember that `args` at the story level will override and args at the component level.
+
+## Decorators
+
+Decorators are components that wrap a story.
+
+For example, we have a `<Center>` component that horizontally align its child component.
+
+Not a good way to do it is to wrap each story with the Center component:
+
+```js
+export const Primary = () => <Center><Button variant='primary'>Primary</Button></Center>
+export const Secondary = () => <Center><Button variant='secondary'>Secondary</Button></Center>
+```
+
+A better way to do it is to add the `decorators` property into the default export object:
+each entry is a function that automatically receives a story as its argument, and then returns the same story with parenthesis now wrapped with che Center component.
+
+```js
+export default {
+  title: 'Form/Button',
+  component: Button,
+  decorators: [story => <Center>{story()}</Center>]
+}
+
+export const Primary = () => <Button variant='primary'>Primary</Button>
+export const Secondary = () => <Button variant='secondary'>Secondary</Button>
+```
+
+### Global decorators
+
+If you want to add a decorator to _all_ the stories in your StoryBook application, we need to add it to the `preview.js`:
+
+```js
+// .storybook/preview.js
+
+import React from 'react'
+import { addDecorator } from '@storybook/react'
+import Center from '../src/components/Center/Center'
+
+addDecorator(story => <Center>{story()}</Center>)
+```
+
+(remember to remove the `decorators` property from the `Button.js` file).
+
+## Theming using Chakra
+
+```jsx
+// preview.js
+
+import React from 'react'
+import { ThemeProvider, theme, CSSReset, Box } from '@chakra-ui'
+// do not use `decorator` function in v6
+...
+
+// export instead an array of decorators
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme={theme}>
+      <CSSReset />
+      <Box m='4'>
+        <Story />
+      </Box>
+    </ThemeProvider>
+  )
+]
+```
+
+## Add-ons
+
+### Console add-on
+
+https://storybook.js.org/addons/@storybook/addon-console
+
+Instead of use the browser console to log messages
+
+```jsx
+...
+export const Log = () => {
+  <Button variantColor='blue' onClick={() => console.log('Button clicked')}>Log button</Button>
+}
+```
+
+we can use Console addon:
+
+```shell
+npm install -D @storybook/addon-console
+```
+
+```jsx
+// preview.js
+
+...
+import '@storybook/addon-console'
+```
+
+Now we can see console.log in our `Actions` StoryBook panel.
+
+If we want to know who triggers the event, we have to add a decorator:
+
+```jsx
+...
+import { withConsole } from '@storybook/addon-console'
+
+...
+addDecorator((storyFn, context) => withConsole()(storyFn)(context))
+```
+
+### Controls addon
+
+Live editing props
+
+https://storybook.js.org/addons/@storybook/addon-controls/
+
+
+## Enviroment variables
+
+Set the label in the script command:
+
+```json
+// package.json
+
+"scripts": {
+  ...
+  "storybook": "set STORYBOOK_THEME=dark && start-storybook -p 6006 -s public"
+  ...
+}
+```
+
+and then use it into the Button component using `process.env.STORYBOOK_THEME`
+
+```jsx
+export const Log = () => {
+  <Button
+    variantColor='blue'
+    onClick={ () => console.log('Button clicked', process.env.STORYBOOK_THEME)}>
+    Log button
+  </Button>
+}
+```

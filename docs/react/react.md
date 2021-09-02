@@ -122,3 +122,46 @@ export default function PokemonList({pokemon}) {
   )
 }
 ```
+
+## Provider
+
+> React’s *provider* pattern is a powerful concept. React uses provider pattern in Context API to share data across the tree descendant nodes.
+
+https://flexiple.com/react/provider-pattern-with-react-context-api/
+
+## Context
+
+> Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+> This means Context API helps us to skip the mandatory hierarchy of passing props for each component in its component tree.
+
+From the official docs: https://reactjs.org/docs/context.html
+
+```jsx
+// Context lets us pass a value deep into the component tree
+// without explicitly threading it through every component.
+// Create a context for the current theme (with "light" as the default).
+const ThemeContext = React.createContext('light');
+
+class App extends React.Component {
+  render() {
+    // Use a Provider to pass the current theme to the tree below.
+    // Any component can read it, no matter how deep it is.
+    // In this example, we're passing "dark" as the current value.
+    return (
+      <ThemeContext.Provider value="dark">
+        <Toolbar />
+      </ThemeContext.Provider>
+    );
+  }
+}
+```
+
+
+Some sample use cases where the Context API proves helpful are:
+
+- Theming
+- Pass down app themei18n
+- Pass down translation messagesAuthentication
+- Pass down current authenticated user
+
+(https://flexiple.com/react/provider-pattern-with-react-context-api/)
