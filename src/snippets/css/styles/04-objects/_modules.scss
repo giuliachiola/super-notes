@@ -1,0 +1,20 @@
+/**
+ * MODULES
+ * Handle spacing between modules
+ */
+
+.o-module--bottom-s {
+	margin-bottom: $space-l;
+}
+
+.o-module--bottom-m {
+	margin-bottom: $space-xl;
+}
+
+.o-module--bottom-l {
+	margin-bottom: $space-xxl;
+}
+
+.o-module--bottom-xl {
+	margin-bottom: $space-xxxl;
+}

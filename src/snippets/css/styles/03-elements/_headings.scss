@@ -1,0 +1,164 @@
+/**
+ * HEADINGS
+ */
+
+$map-t-h1: (
+	mobile: px(44),
+	tabletHor: px(72),
+);
+
+$map-t-h2: (
+	mobile: px(40),
+	tabletHor: px(56),
+);
+
+$map-t-h3: (
+	mobile: px(31),
+	tabletHor: px(40),
+);
+
+$map-t-h4: (
+	mobile: px(26),
+	tabletHor: px(32),
+);
+
+$map-t-h5: (
+	mobile: px(20),
+	tabletHor: px(24),
+);
+
+$map-t-h6: (
+	mobile: px(18),
+	tabletHor: px(20),
+);
+
+$t-headings-line-height: $line-height-s;
+$t-headings-line-height-m: $line-height-m;
+$t-headings-font-size-default: $font-size-xxl;
+
+.h1,
+%font-h1,
+.h2,
+%font-h2,
+.h3,
+%font-h3,
+.h4,
+%font-h4,
+.h5,
+%font-h5,
+.h6,
+%font-h6 {
+	line-height: $t-headings-line-height;
+	margin: $t-headings-line-height * $t-headings-font-size-default 0
+		$t-headings-line-height * $t-headings-font-size-default * 0.5;
+}
+
+.h5,
+%font-h5,
+.h6,
+%font-h6 {
+	// override: in h5 and h6 headings line height is more similar to body than big headings
+	line-height: $t-headings-line-height-m;
+}
+
+// h1
+
+.h1,
+%font-h1 {
+	font-family: $font-family-headings;
+	font-size: map-get($map-t-h1, mobile);
+	font-weight: $font-weight-bold;
+
+	@include mq(tablet-hor) {
+		font-size: map-get($map-t-h1, tabletHor);
+	}
+}
+
+h1 {
+	@extend %font-h1;
+}
+
+// h2
+
+.h2,
+%font-h2 {
+	font-family: $font-family-headings;
+	font-size: map-get($map-t-h2, mobile);
+	font-weight: $font-weight-bold;
+
+	@include mq(tablet-hor) {
+		font-size: map-get($map-t-h2, tabletHor);
+	}
+}
+
+h2 {
+	@extend %font-h2;
+}
+
+// h3
+
+.h3,
+%font-h3 {
+	font-family: $font-family-headings;
+	font-size: map-get($map-t-h3, mobile);
+	font-weight: $font-weight-regular;
+
+	@include mq(tablet-hor) {
+		font-size: map-get($map-t-h3, tabletHor);
+	}
+}
+
+h3 {
+	@extend %font-h3;
+}
+
+// h4
+
+.h4,
+%font-h4 {
+	font-family: $font-family-primary;
+	font-size: map-get($map-t-h4, mobile);
+	font-weight: $font-weight-bold;
+
+	@include mq(tablet-hor) {
+		font-size: map-get($map-t-h4, tabletHor);
+	}
+}
+
+h4 {
+	@extend %font-h4;
+}
+
+// h5
+
+.h5,
+%font-h5 {
+	font-family: $font-family-primary;
+	font-size: map-get($map-t-h5, mobile);
+	font-weight: $font-weight-bold;
+
+	@include mq(tablet-hor) {
+		font-size: map-get($map-t-h5, tabletHor);
+	}
+}
+
+h5 {
+	@extend %font-h5;
+}
+
+// h6
+
+.h6,
+%font-h6 {
+	font-family: $font-family-primary;
+	font-size: map-get($map-t-h6, mobile);
+	font-weight: $font-weight-bold;
+
+	@include mq(tablet-hor) {
+		font-size: map-get($map-t-h6, tabletHor);
+	}
+}
+
+h6 {
+	@extend %font-h6;
+}

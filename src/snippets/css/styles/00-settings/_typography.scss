@@ -1,0 +1,29 @@
+/**
+ * TYPOGRAPHY
+ */
+
+$font-family-primary: 'proxima-nova', sans-serif; // body text, default font
+$font-family-secondary: 'Volkhov', Arial, serif; // headings
+
+$font-size-xs: px(12); // body small
+$font-size-s: px(15); // body medium
+$font-size-m: px(18); // body large
+$font-size-l: px(20);
+$font-size-xl: px(24);
+$font-size-xxl: px(26);
+
+$font-weight-regular: 300; // regular
+$font-weight-semibold: 600; // semibold
+$font-weight-bold: 700; // bold
+
+$line-height-s: 1.2;
+$line-height-m: 1.3; // small headings
+$line-height-l: 1.78; // body (32/18)
+
+// default values to use
+
+$font-family-default: $font-family-primary;
+$font-family-headings: $font-family-secondary;
+$font-size-default: $font-size-m;
+$line-height-default: $line-height-l;
+$font-weight-default: $font-weight-regular;

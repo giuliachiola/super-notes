@@ -1,0 +1,23 @@
+/**
+ * GRID
+ */
+
+$s-grid-gap: px(25);
+
+%o-grid,
+.o-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: $s-grid-gap;
+
+	@include mq(tablet-hor) {
+		grid-template-columns: repeat(12, 1fr);
+	}
+}
+
+// grid item full width
+
+%o-grid__full,
+.o-grid__full {
+	grid-column: 1 / -1;
+}

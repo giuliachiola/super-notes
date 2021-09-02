@@ -1,0 +1,42 @@
+/**
+ * TABLE
+ */
+
+// colors
+$c-table-bg: $co-black-4;
+$c-table-head-bg: $co-black-16;
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+thead {
+	font-size: $font-size-m;
+	background-color: $c-table-head-bg;
+	text-align: left;
+}
+
+tbody {
+	& > tr:nth-child(even) {
+		background-color: $c-table-bg;
+	}
+}
+
+tr {
+	border-bottom: px(1) solid $c-table-bg;
+}
+
+th,
+td {
+	padding: $space-s;
+}
+
+​td {
+	font-size: $font-size-s;
+
+	​ > p {
+		margin: 0;
+		font-size: $font-size-s;
+	}
+}

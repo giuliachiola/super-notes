@@ -1,0 +1,98 @@
+/**
+ * BASE
+ */
+
+* {
+	box-sizing: border-box;
+	// transition: background-color .2s, color .2s;
+}
+
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+
+	@include mq($until: tablet-hor) {
+		&.is-menu-open {
+			position: fixed;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+
+	a > &,
+	figure > & {
+		vertical-align: middle;
+	}
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+ul {
+	padding-left: px(32);
+
+	li {
+		margin-bottom: $space-xxs;
+	}
+}
+
+ol {
+	padding-left: $space-m;
+
+	li {
+		margin-bottom: $space-xxs;
+	}
+}
+
+blockquote {
+	text-align: left;
+	border-left: px(4) solid var(--color-primary);
+	color: var(--color-primary);
+	margin: $space-m 0;
+	padding: $space-m 0 $space-m $space-m;
+}
+
+hr {
+	display: block;
+	height: 0;
+	border: 0;
+	border-top: 1px solid currentColor;
+	padding: 0;
+	margin: $space-m 0;
+}
+
+code {
+	font-family: monospace;
+	border-radius: 2px;
+}
+
+pre {
+	display: block;
+	font-family: monospace;
+	white-space: pre;
+	margin: $space-m 0;
+	// background-color: $geyser;
+	border-radius: 10px;
+	padding: px(20);
+}
+
+table {
+	border: none;
+	border-collapse: inherit;
+	border-spacing: 0;
+	border-color: inherit;
+}

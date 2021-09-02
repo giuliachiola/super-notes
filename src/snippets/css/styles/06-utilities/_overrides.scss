@@ -1,0 +1,50 @@
+/**
+ * OVERRIDES
+ */
+
+.is-hidden { display: none !important; }
+.is-vhidden { visibility: hidden !important; }
+.is-transparent { opacity: 0 !important; pointer-events: none; }
+
+.u-align-left { text-align: left !important; }
+.u-align-right { text-align: right !important; }
+.u-align-center { text-align: center !important; }
+
+.u-no-pointer-events { pointer-events: none !important; }
+.u-no-overflow { overflow: hidden !important; }
+
+// hide element only in mobile
+.u-hidden-m { @include mq($until: tablet) { display: none !important; } }
+// hide element only in tablet
+.u-hidden-t { @include mq(tablet, tablet-hor) { display: none !important; } }
+// hide element only in tablet landscape
+.u-hidden-l { @include mq(tablet-hor, desktop) { display: none !important; } }
+// hide element only in desktop
+.u-hidden-d { @include mq(desktop, cinema) { display: none !important; } }
+// hide element only on big screen
+.u-hidden-c { @include mq(cinema) { display: none !important; } }
+
+// backgrounds
+.u-background-dark { background-color: #19202B !important; }
+
+// spacing bottom elements
+
+.u-margin-bottom-s {
+  margin-bottom: $space-xs;
+  @include mq(tablet) { margin-bottom: $space-s; }
+  @include mq(desktop) { margin-bottom: $space-m; }
+}
+
+.u-margin-bottom-m {
+  margin-bottom: $space-s;
+
+  @include mq(tablet) { margin-bottom: $space-m; }
+  @include mq(desktop) { margin-bottom: $space-l; }
+}
+
+.u-margin-bottom-l {
+  margin-bottom: $space-m;
+
+  @include mq(tablet) { margin-bottom: $space-l; }
+  @include mq(desktop) { margin-bottom: $space-xl; }
+}

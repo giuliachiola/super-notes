@@ -1,0 +1,53 @@
+/**
+ * THEMES
+ */
+
+// Default
+
+html {
+	--color-primary: #{$co-primary};
+	--color-background: #{$co-white};
+	--color-text: #{$co-secondary};
+	--color-link: #{$co-niew-blue};
+	--color-selection: #{$co-primary};
+
+	// i due selection non sono un'unica regola perché su Safari ignora la regola se legge -moz-selection essendo solo per Gecko
+	::-moz-selection {
+		color: $co-white;
+		background-color: var(--color-selection);
+	}
+
+	::selection {
+		color: $co-white;
+		background-color: var(--color-selection);
+	}
+}
+
+// Dark
+
+.t--dark {
+	@extend %bkg--dark;
+	@extend %text--light;
+
+	color: var(--color-text);
+}
+
+%bkg--dark {
+	--color-selection: #{$co-niew-blue};
+	--color-background: #{$co-secondary};
+	background-color: var(--color-background);
+}
+
+%text--light {
+	--color-text: #{$co-white};
+	--color-link: #{$co-niew-blue};
+	--color-selection: #{$co-niew-blue};
+}
+
+body {
+	color: var(--color-text);
+}
+
+a {
+	color: var(--color-link);
+}

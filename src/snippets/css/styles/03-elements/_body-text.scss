@@ -1,0 +1,60 @@
+/**
+ * BODY TEXT
+ */
+
+$t-small-text: px(12);
+$t-small-line-height: px(20);
+
+// Body
+
+* {
+	font-family: inherit;
+	line-height: inherit;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: $font-family-default;
+	font-size: $font-size-default;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-default;
+}
+
+// Paragraphs
+
+p {
+	margin: $line-height-default * $font-size-default 0 $line-height-default *
+		$font-size-default * 0.5;
+}
+
+// Default text
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+strong {
+	font-weight: $font-weight-bold;
+}
+
+em {
+	font-style: italic;
+}
+
+small {
+	font-size: $t-small-text;
+	line-height: $t-small-line-height;
+}
+
+address {
+	font-style: normal;
+}

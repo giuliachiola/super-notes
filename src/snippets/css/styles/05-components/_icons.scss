@@ -1,0 +1,42 @@
+/**
+ * ICONS
+ */
+
+$icon-size-s: px(24);
+$icon-size-m: px(40);
+$icon-size-l: px(68);
+
+$icon-size-default: $icon-size-s;
+
+.icon {
+	width: $icon-size-default;
+	height: $icon-size-default;
+	vertical-align: middle;
+	// color: $co-dark-blue;
+
+	// svg defaults
+	fill: currentColor;
+	fill-rule: evenodd;
+}
+
+// Sizes
+
+.icon--m {
+	width: $icon-size-m;
+	height: $icon-size-m;
+}
+
+.icon--l {
+	width: $icon-size-l;
+	height: $icon-size-l;
+}
+
+// Colors
+
+.icon--light {
+	color: $co-white;
+
+	&:hover {
+		// color: $co-niew-blue;
+	}
+}

@@ -1,0 +1,40 @@
+/**
+ * CALL TO ACTION
+ */
+
+// $c-cta: $co-niew-blue;
+
+// .c-cta {
+// 	@extend %button-reset;
+
+// 	background-color: $c-cta;
+// 	color: $co-white;
+// 	font-size: $font-size-s;
+// 	font-weight: $font-weight-semibold;
+// 	text-transform: uppercase;
+// 	padding: px(14) px(32);
+
+// 	&:hover {
+// 		background-color: $co-cg-blue; // not by design
+// 	}
+// }
+
+// // cta link override
+
+// a.c-cta {
+// 	&:hover {
+// 		text-decoration: none;
+// 	}
+// }
+
+// // Secondary (outline)
+
+// .c-cta--secondary {
+// 	background-color: transparent;
+// 	border: px(1) solid $c-cta;
+// 	color: $c-cta;
+
+// 	&:hover {
+// 		background-color: $co-white;
+// 	}
+// }

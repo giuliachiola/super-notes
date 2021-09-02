@@ -1,0 +1,179 @@
+/**
+ * FORM
+ */
+
+// spacing
+$s-label-mar: $space-xs;
+$s-input-width: 100%;
+$s-input-radius: 0;
+$s-input-pad: px(12) px(5) px(5) px(16);
+$s-input-mar: 0;
+$s-radio-checkbox-size: px(16);
+$s-radio-checkbox-pad: $s-radio-checkbox-size + $space-xs; // total 24
+$s-radio-checkbox-max-width: px(300);
+$s-radio-circle-size: px(10);
+
+// typography
+$s-label-font-size: $font-size-m;
+$s-input-font-size: $font-size-m;
+
+// colors
+$c-inputs: $co-gray;
+$c-inputs-checked: $co-gray;
+$c-label-before: $co-white;
+$c-label-after: $co-primary;
+$c-input-text: rgba($co-maastricht-blue, 0.6);
+$c-input-focus: $co-maastricht-blue;
+
+// reset fieldset
+fieldset {
+	padding: 0;
+	border: none;
+	margin: 0;
+
+	& + & {
+		margin-top: $space-m;
+	}
+}
+
+// generic label
+label {
+	display: block;
+	font-size: $s-label-font-size;
+	font-weight: $font-weight-semibold;
+	margin-bottom: $s-label-mar;
+	color: var(--color-text); // color based on theme
+}
+
+// generic inputs
+textarea,
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+select {
+	width: $s-input-width;
+	border: px(1) solid $c-inputs;
+	font-size: $s-input-font-size;
+	padding: $s-input-pad;
+	margin-bottom: $s-input-mar;
+	border-radius: $s-input-radius;
+	color: $c-input-text;
+
+	&:focus {
+		outline: none;
+		border-color: $c-input-focus;
+	}
+}
+
+// checkboxes & radios
+input[type='checkbox']:not(:checked),
+input[type='checkbox']:checked,
+input[type='radio']:not(:checked),
+input[type='radio']:checked {
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+input[type='checkbox']:not(:checked) + label,
+input[type='checkbox']:checked + label,
+input[type='radio']:not(:checked) + label,
+input[type='radio']:checked + label {
+	position: relative;
+	max-width: $s-radio-checkbox-max-width;
+	padding-left: $s-radio-checkbox-pad;
+	cursor: pointer;
+}
+
+input[type='checkbox']:not(:checked) + label:before,
+input[type='checkbox']:checked + label:before,
+input[type='radio']:not(:checked) + label:before,
+input[type='radio']:checked + label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: $s-radio-checkbox-size;
+	height: $s-radio-checkbox-size;
+	border: px(1) solid $c-inputs;
+	background: $c-label-before;
+	border-radius: $s-input-radius;
+}
+
+input[type='radio']:not(:checked) + label:before,
+input[type='radio']:checked + label:before {
+	border-radius: 100%;
+}
+
+input[type='checkbox']:not(:checked) + label:after,
+input[type='checkbox']:checked + label:after {
+	content: '\2713\0020';
+	position: absolute;
+	color: $c-label-after;
+	top: 50%;
+	transform: translateY(-50%);
+	left: px(2);
+	font-size: $s-radio-checkbox-size * 1.5; // slighty bigger
+	font-weight: $font-weight-bold;
+	transition: opacity 0.2s;
+}
+
+input[type='radio']:not(:checked) + label:after,
+input[type='radio']:checked + label:after {
+	content: '';
+	position: absolute;
+	width: $s-radio-circle-size;
+	height: $s-radio-circle-size;
+	background-color: $c-label-after;
+	top: px(3);
+	left: px(3);
+	transition: opacity 0.2s;
+	border-radius: 100%;
+}
+
+input[type='checkbox']:not(:checked) + label:after,
+input[type='radio']:not(:checked) + label:after {
+	opacity: 0;
+}
+
+input[type='checkbox']:checked + label:after,
+input[type='radio']:checked + label:after {
+	opacity: 1;
+}
+
+input[type='checkbox']:checked + label:before,
+input[type='radio']:checked + label:before {
+	opacity: 1;
+	border-color: $c-label-after;
+}
+
+input[type='checkbox']:disabled:not(:checked) + label:before,
+input[type='checkbox']:disabled:checked + label:before,
+input[type='radio']:disabled:not(:checked) + label:before,
+input[type='radio']:disabled:checked + label:before {
+	background-color: $c-inputs-checked;
+}
+
+input[type='checkbox']:disabled:checked + label:after,
+input[type='radio']:disabled:checked + label:after {
+	color: $c-inputs-checked;
+}
+
+input[type='checkbox']:disabled + label,
+input[type='radio']:disabled + label {
+	color: $c-inputs;
+	cursor: not-allowed;
+}
+
+input[type='checkbox']:checked:focus + label:before,
+input[type='checkbox']:not(:checked):focus + label:before,
+input[type='radio']:checked:focus + label:before,
+input[type='radio']:not(:checked):focus + label:before {
+	border: px(1) dotted $c-label-after;
+}
