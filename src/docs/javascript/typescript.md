@@ -8,6 +8,13 @@ From the official docs https://www.typescriptlang.org/docs/handbook:
 - TypeScript is also a programming language that preserves the runtime behavior of JavaScript.
 - TypeScript is JavaScript’s runtime with a compile-time type checker.
 
+From [TypeScript Course for Beginners 2021]()
+
+- It's a JavaScript superset (= a language building up on JavaScript)
+- So it takes JavaScript language and adds new features and advantages
+- TS can't be executed by environments such as browser and node
+- TS is a _programming language_ but also a _tool_: it's a powerful compiler which runs over your code and compiles your TS code to JS
+- TS gives extra error checking before running code
 
 ## How to use TypeScript
 
