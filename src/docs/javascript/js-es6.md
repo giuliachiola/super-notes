@@ -192,3 +192,10 @@ document.removeEventListener('click', method1)
 > All primitives are immutable.
 
 [MDN primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+
+## Date
+
+```js
+Date() // returns a string
+new Date() // returns a Date object
+```
