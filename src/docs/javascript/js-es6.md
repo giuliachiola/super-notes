@@ -199,3 +199,15 @@ document.removeEventListener('click', method1)
 Date() // returns a string
 new Date() // returns a Date object
 ```
+
+# `+` symbol
+
+The `+` operator returns the numeric representation of the object.
+
+```js
+const a = '10'
+const b = +a
+
+console.log(b) // 10
+console.log(typeof b) // number
+```
