@@ -369,3 +369,15 @@ enum Direction {
   Right,
 }
 ```
+
+----
+
+## Non-null assertion operator `!`
+
+It is a way to tell the compiler "this expression cannot be null or undefined here, so don't complain about the possibility of it being null or undefined." Sometimes the type checker is unable to make that determination itself.
+
+```js
+const input1 = document.getElementById('num1')! as HTMLInputElement
+```
+
+[from StackOverflow](https://stackoverflow.com/a/42274019)
