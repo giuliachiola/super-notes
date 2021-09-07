@@ -185,3 +185,10 @@ document.addEventListener('click', method2)
 document.removeEventListener('click', method1)
 ```
 
+## Primitive
+
+> In JavaScript, a **primitive** is data that is not an object and has no methods. There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol, and null.
+> 
+> All primitives are immutable.
+
+[MDN primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
