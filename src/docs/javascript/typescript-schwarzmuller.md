@@ -11,6 +11,7 @@ From "TypeScript Course for Beginners 2021 - Maximilian Schwarzmüller"
 - `array`: any JavaScript array, type can be flexible or strict (regarding type elements)
 - `tuple`: (added by TypeScript) fixed-length array
 - `enum`: (added by TypeScript) automatically enumerated global constant identifiers
+- `any`: any kind of value, no specific type assignment
 
 ## Key differences
 
@@ -217,3 +218,227 @@ If you need to assign any other numbers as inizializers, you can add them to `en
 ```js
 enum Permission { ADMIN = 5, READ_ONLY = 100, AUTHOR = 'author123' };
 ```
+
+## Type `any`
+
+In this way I am declaring that `favoriteActivities` is an array, but I have not specified what is the type of its content:
+
+```js
+let favoriteHobbies: any[];
+favoriteHobbies = ['Sport', 10]; // OK
+
+let favoriteHobbiesString: string[];
+favoriteHobbiesString = ['Sport', 10]; // NOPE, should be strings!
+```
+
+Use `any` carefully, just when you absolutely do not know what values types you are going to use.
+
+## Compex types
+
+### Union type
+
+This will throw an error:
+
+> Operator '+' cannot be applied to types 'string | number' and 'string | number'.ts(2365)
+
+```js
+function combine(input1: number | string, input2: number | string) {
+  const result = input1 + input2 // ERROR
+  return result
+}
+```
+
+we have to workaround it working separately with numbers or with strings:
+
+```js
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  if (typeof input1 === 'number' && typeof input2 === 'number') {
+    // both numbers
+    result = input1 + input2
+  } else {
+    // both strings
+    result = input1.toString() + input2.toString()
+  }
+  return result
+}
+
+const combinedAges = combine(30, 21); // OK
+const combinedNames = combine('anna', 'robin'); // OK
+```
+
+### Literal type
+
+From the [official docs](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types):
+> One way to think about this is to consider how JavaScript comes with different ways to declare a variable. Both var and let allow for changing what is held inside the variable, and const does not. This is reflected in how TypeScript creates types for literals.
+
+```js
+let changingString = "Hello World";
+changingString = "Olá Mundo";
+// Because `changingString` can represent any possible string, that
+// is how TypeScript describes it in the type system
+changingString;
+
+let changingString: string
+
+const constantString = "Hello World";
+// Because `constantString` can only represent 1 possible string, it
+// has a literal type representation
+constantString;
+
+/* (on hover)
+const constantString: "Hello World"
+*/
+```
+
+Example:
+
+```js
+function combine(
+  input1: number | string,
+  input2: number | string,
+  resultConversion: 'as-number' | 'as-text',
+  ) {
+  let result;
+  if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
+    result = +input1 + +input2 // add `+` to force convertion to a number for each input
+  } else {
+    result = input1.toString() + input2.toString()
+  }
+  return result
+}
+
+const combinedAges = combine(30, 21, 'as-number');
+const combinedAgesString = combine('30', '21', 'as-number'); // 3rd argument is useful
+const combinedNames = combine('anna', 'robin', 'as-text');
+
+console.log({combinedAges}) // output => 51
+console.log({combinedAgesString}) // output => 51
+console.log({combinedNames}) // output => 'annarobin'
+```
+
+## Type aliases
+
+https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases
+
+From
+
+```js
+function combine(
+  input1: number | string,
+  input2: number | string,
+  resultConversion: 'as-number' | 'as-text',
+  ) {
+  ...
+}
+```
+
+to
+
+```js
+type Combinable = number | string
+
+function combine(
+  input1: Combinable, // reusable type
+  input2: Combinable, // reusable type
+  resultConversion: 'as-number' | 'as-text',
+  ) {
+  ...
+}
+```
+
+## Return type
+
+Usually, it is better to NOT declare it like this:
+
+```js
+function add(n1: number, n2: number): number {
+  return n1 + n2
+}
+```
+
+and leave the inferred type.
+
+Example with `void` return:
+
+```js
+...
+function printResult(num: number): void {
+  console.log('Result: ' + num);
+  // we are not returning anything here! so the function returns `void`
+}
+```
+
+Note that a function is not allowed to return `undefined`:
+
+```js
+...
+function printResult(num: number): undefined { // ERROR
+  console.log('Result: ' + num);
+}
+```
+
+```shell
+A function whose declared type is neither 'void' nor 'any' must return a value.ts(2355)
+```
+
+To return `undefined`, a function should return like this:
+
+```js
+function printResult(num: number): undefined { // OK
+  console.log('Result: ' + num);
+  return;
+}
+```
+
+in this way you are returning something, but without a real value.
+
+### Store function in a variable
+
+To do it is ok with TypeScript
+
+```js
+function add(n1: number, n2: number): number {
+  return n1 + n2
+}
+
+let combineValues;
+combineValues = add;
+
+console.log(combineValues(8, 8)) // 16
+```
+
+## Function types
+
+Function types are types that describe a function, regarding parameters and return values.
+
+Function types have this notation close to "arrow function" notation, but using types instead of brackets.
+
+```js
+let combineValues: (a: number, b: number) => number
+```
+
+In that way ^^ `combineValues` function should accepts any function that takes two parameters where each parameter is a number and the function overall returns a number.
+
+```js
+function add(n1: number, n2: number) {
+  return n1 + n2;
+}
+
+function printResult(num: number): void {
+  console.log('Result: ' + num);
+}
+
+let combineValues: (a: number, b: number) => number
+
+combineValues = add; // OK
+combineValues = printResult; // NOPE! error: "Type 'void' is not assignable to type 'number'"
+// because printResult() does not complain with the `combineValues` fn type definition
+
+console.log(combineValues(8, 8));
+```
+
+So, function types allow us to describe which function is allowed specificly we want to use.
+
+
+### Callback functions
