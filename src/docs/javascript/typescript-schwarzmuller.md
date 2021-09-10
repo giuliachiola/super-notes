@@ -442,3 +442,81 @@ So, function types allow us to describe which function is allowed specificly we 
 
 
 ### Callback functions
+
+Callback functions (= cb)
+
+```js
+function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
+  const result = n1 + n2
+  cb(result)
+}
+
+addAndHandle(10, 20, (result) => {
+  console.log(result)
+})
+```
+
+## Type `unknown`
+
+We do not know what the variable type will be.
+
+```js
+let userInput: unknown;
+
+// both are valid
+userInput = 5;
+userInput = 'Max';
+```
+
+Pay attention that you can't assign an unknown type to a declared type:
+
+```js
+let userInput: unknown;
+let userName: string;
+
+userName = userInput; // NOPE!
+// Type 'unknown' is not assignable to type 'string'
+```
+
+we have to check the type and then we can store it:
+
+```js
+let userInput: unknown;
+let userName: string;
+
+if (typeof userInput === 'string') {
+  userName = userInput; // OK
+}
+```
+
+## Type `never`
+
+`never` is another type a function can return.
+
+```js
+function generateError(message: string, code: number): never {
+  throw { message: message, errorCode: code }
+  // this function will not return anything
+}
+
+generateError('An error occurred', 500);
+```
+
+In fact, if we try to assign the return value to a variable:
+
+```js
+const resultValue = generateError('An error occurred', 500);
+console.log(resultValue) // (empty, not `undefined`)
+```
+
+and see at the browser Console, we will see that this function do not return anything after the Error message, not even `undefined`.
+
+Another function that will return a `never` type is an infinite loop:
+
+```js
+function infiniteLoopFn(message: string, code: number): never {
+  while (true) {...}
+}
+```
+
+[More info about `never` type](https://www.tutorialsteacher.com/typescript/typescript-never)
