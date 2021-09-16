@@ -41,3 +41,19 @@ now we can just run the command without specify any files, because from the JSON
 ```shell
 tsc
 ```
+
+## JSON config
+
+- `exclude`: note that `node_modules` are already excluded by default.
+
+```json
+"exclude": [
+	"file-to-esclude.ts",
+]
+```
+
+- `include`
+- `files`
+
+- `compilerOptions`: how our files will be compiled
+	- `lib`: e.g. `dom` unlocks all DOM APIs
