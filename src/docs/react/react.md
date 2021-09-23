@@ -14,15 +14,11 @@ npx create-react-app .
 
 typing `rfc` this extension will write
 
-```shell
-import React from 'react'
+```js
+import React from "react";
 
 export default function TodoList() {
-  return (
-    <div>
-
-    </div>
-  )
+  return <div></div>;
 }
 ```
 
@@ -46,7 +42,7 @@ export default App;
 add a React fragment instead
 
 ```jsx
-import TodoList from './TodoList'
+import TodoList from "./TodoList";
 
 function App() {
   return (
@@ -68,11 +64,9 @@ export default App;
 // todos = ['apple', 'banana', 'peach']
 
 export default function TodoList(todos) {
-  return (
-    todos.map(todo => {
-      return <Todo key={todo} todo={todo} />
-    })
-  )
+  return todos.map((todo) => {
+    return <Todo key={todo} todo={todo} />;
+  });
 }
 ```
 
@@ -114,18 +108,14 @@ export default function PokemonList(props) {
 or (better way) destructuring props we need:
 
 ```jsx
-export default function PokemonList({pokemon}) {
-  return (
-    <div>
-
-    </div>
-  )
+export default function PokemonList({ pokemon }) {
+  return <div></div>;
 }
 ```
 
 ## Provider
 
-> React’s *provider* pattern is a powerful concept. React uses provider pattern in Context API to share data across the tree descendant nodes.
+> React’s _provider_ pattern is a powerful concept. React uses provider pattern in Context API to share data across the tree descendant nodes.
 
 https://flexiple.com/react/provider-pattern-with-react-context-api/
 
@@ -140,7 +130,7 @@ From the official docs: https://reactjs.org/docs/context.html
 // Context lets us pass a value deep into the component tree
 // without explicitly threading it through every component.
 // Create a context for the current theme (with "light" as the default).
-const ThemeContext = React.createContext('light');
+const ThemeContext = React.createContext("light");
 
 class App extends React.Component {
   render() {
@@ -155,7 +145,6 @@ class App extends React.Component {
   }
 }
 ```
-
 
 Some sample use cases where the Context API proves helpful are:
 

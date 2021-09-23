@@ -40,7 +40,7 @@ https://www.typescriptlang.org/tsconfig/#noEmitOnError
 // JS
 
 function greet(person, date) {
-	console.log(`Hello ${person}, today is ${date}!`);
+  console.log(`Hello ${person}, today is ${date}!`);
 }
 ```
 
@@ -48,7 +48,7 @@ function greet(person, date) {
 // TS
 
 function greet(person: string, date: Date) {
-	console.log(`Hello ${person}, today is ${date.toDateString()}!`);
+  console.log(`Hello ${person}, today is ${date.toDateString()}!`);
 }
 ```
 
@@ -70,9 +70,9 @@ let msg = "hello there!"; // TS -> let msg: string
 // hello.ts
 
 function greet(person: string, date: Date) {
-	console.log(`Hello ${person}, today is ${date.toDateString()}!`);
+  console.log(`Hello ${person}, today is ${date.toDateString()}!`);
 }
- 
+
 greet("Maddison", new Date());
 ```
 
@@ -83,7 +83,7 @@ will be compiled to
 
 "use strict";
 function greet(person, date) {
-		console.log("Hello " + person + ", today is " + date.toDateString() + "!");
+  console.log("Hello " + person + ", today is " + date.toDateString() + "!");
 }
 greet("Maddison", new Date());
 ```
@@ -95,12 +95,11 @@ Note that our person and date parameters no longer have type annotations.
 ## Downleveling
 
 ```js
-hello.ts
-`Hello ${person}, today is ${date.toDateString()}!`;
+hello.ts`Hello ${person}, today is ${date.toDateString()}!`;
 ```
 
 ```js
-hello.js
+hello.js;
 "Hello " + person + ", today is " + date.toDateString() + "!";
 ```
 
@@ -127,7 +126,7 @@ tsc --target es2015 hello.ts
 Example:
 
 ```js
-const arr = [1, 2, 3]
+const arr = [1, 2, 3];
 ```
 
 type: `number[]`
@@ -168,7 +167,7 @@ When a parameter has a type annotation, arguments to that function will be check
 ```js
 // Parameter type annotation
 function greet(name: string) {
-	console.log("Hello, " + name.toUpperCase() + "!!");
+  console.log("Hello, " + name.toUpperCase() + "!!");
 }
 ```
 
@@ -180,7 +179,7 @@ Return type annotations appear after the parameter list:
 
 ```js
 function getFavoriteNumber(): number {
-	return 26;
+  return 26;
 }
 ```
 
@@ -204,16 +203,16 @@ Property 'toUppercase' does not exist on type 'string'. Did you mean 'toUpperCas
 ### Object typing
 
 ```js
-function printName(obj: { first: string; last: string }) {
-	// ...
+function printName(obj: { first: string, last: string }) {
+  // ...
 }
 ```
 
 Adding a `?` to the property name, it means that it is an optional parameter:
 
 ```js
-function printName(obj: { first: string; last?: string }) {
-	// ...
+function printName(obj: { first: string, last?: string }) {
+  // ...
 }
 ```
 
@@ -223,7 +222,7 @@ A union type is a type formed from two or more other types, representing values 
 
 ```js
 function printId(id: number | string) {
-	console.log("Your ID is: " + id);
+  console.log("Your ID is: " + id);
 }
 // OK
 printId(101);
@@ -231,13 +230,13 @@ printId(101);
 printId("202");
 ```
 
-IMPORTANT: TypeScript will only allow you to do things with the union if that thing is valid for every member of the union. 
+IMPORTANT: TypeScript will only allow you to do things with the union if that thing is valid for every member of the union.
 
 ```js
 function printId(id: number | string) {
-	console.log(id.toUpperCase()); // ERROR!
-		// Property 'toUpperCase' does not exist on type 'string | number'.
-		// Property 'toUpperCase' does not exist on type 'number'.
+  console.log(id.toUpperCase()); // ERROR!
+  // Property 'toUpperCase' does not exist on type 'string | number'.
+  // Property 'toUpperCase' does not exist on type 'number'.
 }
 ```
 
@@ -247,13 +246,13 @@ Narrowing occurs when TypeScript can deduce a more specific type for a value bas
 
 ```js
 function printId(id: number | string) {
-	if (typeof id === "string") {
-		// In this branch, id is of type 'string'
-		console.log(id.toUpperCase());
-	} else {
-		// Here, id is of type 'number'
-		console.log(id);
-	}
+  if (typeof id === "string") {
+    // In this branch, id is of type 'string'
+    console.log(id.toUpperCase());
+  } else {
+    // Here, id is of type 'number'
+    console.log(id);
+  }
 }
 ```
 
@@ -263,16 +262,16 @@ A type alias is exactly that - a name for any type. The syntax for a type alias 
 
 ```js
 type Point = {
-	x: number;
-	y: number;
+  x: number,
+  y: number,
 };
- 
+
 // Exactly the same as the earlier example
 function printCoord(pt: Point) {
-	console.log("The coordinate's x value is " + pt.x);
-	console.log("The coordinate's y value is " + pt.y);
+  console.log("The coordinate's x value is " + pt.x);
+  console.log("The coordinate's y value is " + pt.y);
 }
- 
+
 printCoord({ x: 100, y: 100 });
 ```
 
@@ -282,10 +281,10 @@ An interface declaration is another way to name an object type:
 
 ```js
 interface Point {
-	x: number;
-	y: number;
+  x: number;
+  y: number;
 }
- 
+
 //... same as above
 ```
 
@@ -295,11 +294,11 @@ Interface:
 
 ```js
 interface Bear {
-	name: string
+  name: string;
 }
 
 interface Bear {
-	honey: boolean
+  honey: boolean;
 }
 
 /*
@@ -316,18 +315,27 @@ Type:
 
 ```js
 type Bear = {
-  name: string
-}
+  name: string,
+};
 
 type Bear = {
-  honey: boolean
-}
+  honey: boolean,
+};
 
 /*
 ERROR
 
 // Error: Duplicate identifier 'Bear'.
 */
+```
+
+To make interface properties optional add `?` before the property name:
+
+```js
+interface CoolProps {
+  foo?: number;
+  bar?: string;
+}
 ```
 
 ### Type Assertions
@@ -370,7 +378,7 @@ enum Direction {
 }
 ```
 
-----
+---
 
 ## Non-null assertion operator `!`
 
@@ -397,4 +405,17 @@ function add(num1: number, num2: number) {
 button.addEventListener('click', function() {
 	console.log(add(Number(input1.value), Number(input2.value)))
 })
+```
+
+## Function component
+
+```js
+interface CoolProps {
+  foo: number;
+  bar: string;
+}
+
+const Cool: FC<CoolProps> = (props) => {
+  return <>{props.children}</>; // here we can also use { props.foo }
+};
 ```
