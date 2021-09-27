@@ -1,4 +1,7 @@
 # Git - TO REVIEW!
+
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 ### Git
 
 **Learning**
@@ -6,7 +9,7 @@
 _Interactive_  
 [Learn Git Branching](http://learngitbranching.js.org/?demo)  
 [Git Real](http://gitreal.codeschool.com/levels/1)  
-[Try Git](https://try.github.io/)  
+[Try Git](https://try.github.io/)
 
 _Readings_  
 [Git How To](https://githowto.com/)  
@@ -15,7 +18,6 @@ _Readings_
 [Git guide](http://rogerdudler.github.io/git-guide/)
 [Git immersion](http://gitimmersion.com/)
 [Atlassian Tutorial](https://www.atlassian.com/git/tutorials)
-
 
 _Videos_  
 [Learn Git in 20 Minutes - c0deporn](https://www.youtube.com/watch?v=Y9XZQO1n_7c)  
@@ -29,40 +31,40 @@ _Videos_
 **Command line instructions (common ones)**
 
 | Setup                                               | --                                                                            |
-|-----------------------------------------------------|-------------------------------------------------------------------------------|
-| `git help [command]`                                | Mostra documentazione di *command*                                            |
+| --------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `git help [command]`                                | Mostra documentazione di _command_                                            |
 | `git config --list`                                 | Lista delle configurazioni                                                    |
 | `git config --global user.name "myusername"`        | Impostare username globalmente (per ogni repository)                          |
 | `git config --global user.email "myemail@mail.com"` | Impostare email globalmente (per ogni repository)                             |
-| `git config --global push.default matching`         | Push *all branches* from local to remote with the same name                   |
-| `git config --global push.default simple`           | Push *only the current* branch (solo il branch da cui ha fatto la pull)       |
+| `git config --global push.default matching`         | Push _all branches_ from local to remote with the same name                   |
+| `git config --global push.default simple`           | Push _only the current_ branch (solo il branch da cui ha fatto la pull)       |
 | `git init`                                          | Inizializzare un repository                                                   |
 | `git clone [urlrepository]`                         | Clonare un repository                                                         |
 | `git clone [urlrepository] [foldername]`            | Clonare un repository (cambiando il nome della cartella in cui viene clonato) |
 
 | Status                            | --                                                                                                                        |
-|-----------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `git status`                      | Mostra lo stato corrente (se in locale ho files nuovi/modificati/cancellati rispetto al repository) e in che branch siamo |
 | `git status -s`                   | Mostra lo stato corrente, -s = short format > A = added, D = deleted, R = renamed                                         |
-| `git add .`                       | Stages everything, *without Deleted* Files                                                                                |
-| `git add -u`                      | Stages only *Modified* Files                                                                                              |
-| `git add -A`                      | Stages *Everything*                                                                                                       |
-| `git add --all`                   | (= `git add -A`) Aggiunge nello staging *tutti* stage files on the whole working tree                                     |
-| `git add -A .`                    | Aggiunge nello staging *solo* stage files under the currrent path                                                         |
-| `git add /docs`                   | Aggiunge nello staging *tutti* i file nella cartella *docs*                                                               |
-| `git add *.ext`                   | Aggiunge nello staging *solo* i file con estensione *.ext*                                                                |
-| `git add [filename]`              | Aggiunge nello staging *solo* *filename*                                                                                  |
+| `git add .`                       | Stages everything, _without Deleted_ Files                                                                                |
+| `git add -u`                      | Stages only _Modified_ Files                                                                                              |
+| `git add -A`                      | Stages _Everything_                                                                                                       |
+| `git add --all`                   | (= `git add -A`) Aggiunge nello staging _tutti_ stage files on the whole working tree                                     |
+| `git add -A .`                    | Aggiunge nello staging _solo_ stage files under the currrent path                                                         |
+| `git add /docs`                   | Aggiunge nello staging _tutti_ i file nella cartella _docs_                                                               |
+| `git add *.ext`                   | Aggiunge nello staging _solo_ i file con estensione _.ext_                                                                |
+| `git add [filename]`              | Aggiunge nello staging _solo_ _filename_                                                                                  |
 | `git add -i`                      | Interactive adding (-i = interactive)                                                                                     |
-| `git rm [filename]`               | Rimuove dallo staging e *dal working tree* locale *filename*                                                              |
+| `git rm [filename]`               | Rimuove dallo staging e _dal working tree_ locale _filename_                                                              |
 | `git commit -m "message"`         | Impacchetta la commit con le modifiche effettuate in locale, con il messaggio allegato                                    |
-| `git commit -a -m "message"`      | Impacchetta la commit con le modifiche effettuate in locale, *cancella* i file che in locale ho cancellato                |
+| `git commit -a -m "message"`      | Impacchetta la commit con le modifiche effettuate in locale, _cancella_ i file che in locale ho cancellato                |
 | `git commit -am "message"`        | Add dei file modificati in locale + Remove di quelli rimossi in locale                                                    |
 | `git commit --amend -m "message"` | (Locale) Reset dell'ultima commit con quella nuova (Non si può fare se si ha già pushato)                                 |
 
 | Pull / Push / Fetch                       | --                                                                                                         |
-|-------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| `git fetch origin [branchname]`           | Guarda le differenze tra repo e locale (*download only*)                                                   |
-| `git fetch -p`                            | Guarda le differenze tra repo e locale (*download only*) -p= prune (Prune all unreachable objects)         |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `git fetch origin [branchname]`           | Guarda le differenze tra repo e locale (_download only_)                                                   |
+| `git fetch -p`                            | Guarda le differenze tra repo e locale (_download only_) -p= prune (Prune all unreachable objects)         |
 | `git pull origin [branchname]`            | Prende le differenze tra repo e locale                                                                     |
 | `git push origin [branchname]`            | Lancia nel repo le differenze tra repo e locale (pull = fetch + merge)                                     |
 | `git push - u origin [branchname]`        | Lancia nel repo le differenze tra repo e locale (-u = upstream, ricorda i parametri per la prossima volta) |
@@ -71,25 +73,25 @@ _Videos_
 | `git merge --no-ff`                       | Merge (no fast forward)                                                                                    |
 | `git merge [commit]`                      | Merge to a specific commit                                                                                 |
 
-| Branches                                | --                                                                |
-|-----------------------------------------|-------------------------------------------------------------------|
-| `git checkout [branchname]`             | Mi sposto su branchname                                           |
-| `git checkout -b [branchname]`          | Creo branchname e mi sposto                                       |
-| `git checkout [commitID]`               | Mi sposto su una specifica commit                                 |
-| `git checkout [filename]`               | Mi sposto nel punto dove c'era quel file                          |
-| `git checkout -- [filename]`            | Hard reset of a single file (lo ripristino se l'ho cancellato)    |
-| `git checkout HEAD`                     | Restore last commit                                               |
-| `git branch`                            | Elenca i branch *locali*, con * vicino a quello corrente          |
-| `git branch -v`                         | Elenca i branch *locali*, con * vicino a quello corrente          |
-| `git branch -r`                         | Elenca i branch *remoti*, con * vicino a quello corrente          |
-| `git branch -a`                         | Elenca i branch *remoti e locali*, con * vicino a quello corrente |
-| `git branch -d [branchname]`            | Delete *local* branch *branchname*                                |
-| `git push origin --delete [branchname]` | WARNING! Delete *remote* branch *branchname*                      |
-| `git branch -m [oldname] [newname]`     | Rename branch                                                     |
+| Branches                                | --                                                                 |
+| --------------------------------------- | ------------------------------------------------------------------ |
+| `git checkout [branchname]`             | Mi sposto su branchname                                            |
+| `git checkout -b [branchname]`          | Creo branchname e mi sposto                                        |
+| `git checkout [commitID]`               | Mi sposto su una specifica commit                                  |
+| `git checkout [filename]`               | Mi sposto nel punto dove c'era quel file                           |
+| `git checkout -- [filename]`            | Hard reset of a single file (lo ripristino se l'ho cancellato)     |
+| `git checkout HEAD`                     | Restore last commit                                                |
+| `git branch`                            | Elenca i branch _locali_, con \* vicino a quello corrente          |
+| `git branch -v`                         | Elenca i branch _locali_, con \* vicino a quello corrente          |
+| `git branch -r`                         | Elenca i branch _remoti_, con \* vicino a quello corrente          |
+| `git branch -a`                         | Elenca i branch _remoti e locali_, con \* vicino a quello corrente |
+| `git branch -d [branchname]`            | Delete _local_ branch _branchname_                                 |
+| `git push origin --delete [branchname]` | WARNING! Delete _remote_ branch _branchname_                       |
+| `git branch -m [oldname] [newname]`     | Rename branch                                                      |
 
 | Log                                                                 | --                                                                              |
-|---------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| `git log`                                                           | Mostra lo storico delle commit (per uscire: *q*)                                |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `git log`                                                           | Mostra lo storico delle commit (per uscire: _q_)                                |
 | `git log --author:Bob`                                              | Mostra lo storico delle commit solo dell'autore "Bob"                           |
 | `git log --stat`                                                    | Mostra lo storico dei files che sono stati modificati                           |
 | `git log --oneline`                                                 | Mostra lo storico dei files che sono stati modificati (con scrittura compatta)  |
@@ -104,25 +106,25 @@ _Videos_
 | `git show [commitID]`                                               | git log on a single revision (commit details)                                   |
 
 | Reset / Stash / Revert / Clean | --                                                                                                        |
-|--------------------------------|-----------------------------------------------------------------------------------------------------------|
-| `git reset --hard HEAD`        | Discard *all* local changes                                                                               |
-| `git reset --soft HEAD~1`      | undo the last commit, *keep* the changes in your working  tree *and* the index                            |
-| `git reset HEAD~1`             | undo the last commit, *keep* the changes in your working tree *but not* on the index                      |
-| `git reset --hard HEAD~1`      | undo the last commit, the changes *won't stay* in your working tree                                       |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `git reset --hard HEAD`        | Discard _all_ local changes                                                                               |
+| `git reset --soft HEAD~1`      | undo the last commit, _keep_ the changes in your working tree _and_ the index                             |
+| `git reset HEAD~1`             | undo the last commit, _keep_ the changes in your working tree _but not_ on the index                      |
+| `git reset --hard HEAD~1`      | undo the last commit, the changes _won't stay_ in your working tree                                       |
 | `git reset --hard [commit]`    | undo the until this commit (if it hasn't been pushed yet)                                                 |
-| `git reset [filename]`         | remove *filename* from stage                                                                              |
+| `git reset [filename]`         | remove _filename_ from stage                                                                              |
 | `git revert HEAD`              | To revert last commit already pushed                                                                      |
-| `git revert [badcommitID]`     | Torna indietro allo stato *precedente alla commit* "badcommitID"                                          |
-| `git touch [filename]`         | Crea il file *filename*                                                                                   |
+| `git revert [badcommitID]`     | Torna indietro allo stato _precedente alla commit_ "badcommitID"                                          |
+| `git touch [filename]`         | Crea il file _filename_                                                                                   |
 | `git stash`                    | Accantona momentenamente le modifiche fatte in locale, per poterle prendere in un secondo momento         |
 | `git stash apply`              | Prende le modifiche accantonate e le applica                                                              |
 | `git stash save --keep-index`  | Discard unstaged changes in working copy, but not in the index                                            |
 | `git stash list`               | Mostra tutti gli stash che ho                                                                             |
 | `git stash pop`                | Rimuove gli stash che ho e li mette nella working directory                                               |
 | `git diff`                     | Mostra differenze tra il file locale e l'ultima commit                                                    |
-| `git diff HEAD`                | Mostra differenze tra il *corrente* e l'ultima commit                                                     |
-| `git diff --staged`            | Mostra differenze tra i file che ho appena aggiunto allo *stage* e l'ultima commit                        |
-| `git diff --cached`            | Mostra differenze tra i file che ho appena aggiunto allo *stage* e l'ultima commit (sinonimo di --cached) |
+| `git diff HEAD`                | Mostra differenze tra il _corrente_ e l'ultima commit                                                     |
+| `git diff --staged`            | Mostra differenze tra i file che ho appena aggiunto allo _stage_ e l'ultima commit                        |
+| `git diff --cached`            | Mostra differenze tra i file che ho appena aggiunto allo _stage_ e l'ultima commit (sinonimo di --cached) |
 | `git diff [filename]`          | Mostra differenze tra il corrente e l'ultima commit                                                       |
 | `git clean`                    | (Attention!) Remove untracked files from the working tree                                                 |
 | `git clean -n`                 | Show which untracked files from the working tree will be removed                                          |
@@ -130,14 +132,14 @@ _Videos_
 | `git clean -f -d`              | (Attention!) Remove untracked files and directory from the working tree                                   |
 
 | Tag                                  | --                  |
-|--------------------------------------|---------------------|
+| ------------------------------------ | ------------------- |
 | `git tag [tagname]`                  | Create tag name     |
 | `git push origin --tags`             | Push tags to remote |
 | `git tag --delete [tagname]`         | Delete local tag    |
 | `git push --delete origin [tagname]` | Delete remote tag   |
 
 | Other                                 | --                                                                                                          |
-|---------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | `git grep "[string]"`                 | Cerca file per l'occorrenza di una stringa che fanno match con i pattern                                    |
 | `git grep "\.[string]"`               | Cerca file per l'occorrenza di una stringa (serve l'escape carachter se devo cercare anche il punto)        |
 | `git remote`                          | elenca i server git remoti > origin                                                                         |
@@ -150,7 +152,7 @@ _Videos_
 | `gitk --all`                          | Mostra tutti i commit                                                                                       |
 
 | GIT FLOW                               | --                                                                   |
-|----------------------------------------|----------------------------------------------------------------------|
+| -------------------------------------- | -------------------------------------------------------------------- |
 | `git flow init`                        | Inizializza git flow                                                 |
 | `git flow feature start [branchname]`  | Start feature (new branch feature/branchname from develop)           |
 | `git flow feature finish [branchname]` | Finish feature (merge feature/branchname into develop and delete it) |
@@ -160,11 +162,11 @@ _Videos_
 _First configuration_
 
 ```
-git config --global user.name "myusername"  
-git config --global user.email "myemail@mail.com"   
-git config --global push.default simple  
-git config --global color.ui true  
-git config --global color.status auto  
+git config --global user.name "myusername"
+git config --global user.email "myemail@mail.com"
+git config --global push.default simple
+git config --global color.ui true
+git config --global color.status auto
 git config --global color.branch auto
 ```
 
@@ -177,16 +179,16 @@ Windows (Bash): `passwd`
 _(Local) Undo last commit not pushed yet_
 
 ```
-git reset HEAD^  
-git commit --amend -m "new message"  
-git add -u  
+git reset HEAD^
+git commit --amend -m "new message"
+git add -u
 git push origin [branchname]
 ```
 
 _Discard all local changes/commits and pull from upstream_
 
 ```
-git reset --hard origin/[branchname]  
+git reset --hard origin/[branchname]
 git pull origin [branchname]
 ```
 
@@ -203,6 +205,7 @@ cd ~
 ls -la | grep .bash_history
 cat .bash_history
 ```
+
 `history`: mostra lo storico dei comandi dati
 `history | grep "git log"`: prende soltanto i comandi dati contenenti 'git log'
 
@@ -218,14 +221,15 @@ _Interactive adding_
 `a` (add untracked) > `*` (add all) > `q` (quit)
 
 _Spostare file da un branch all'altro_  
-`git checkout master`  (get back to master)  
-`git checkout branchname -- filename.ext ` (then copy the version of app.js from branch "branchname")  
+`git checkout master` (get back to master)  
+`git checkout branchname -- filename.ext ` (then copy the version of app.js from branch "branchname")
 
 oppure  
-`git checkout master`  (get back to master)  
+`git checkout master` (get back to master)  
 `git checkout branchname path/to/filename.ext`
 
 _Best (and safest) way to merge a git branch into master_ [stackOverflow](https://stackoverflow.com/questions/5601931/best-and-safest-way-to-merge-a-git-branch-into-master)
+
 ```
 git checkout master
 git pull origin master
@@ -236,10 +240,10 @@ git push origin master
 _Other commands_
 
 | Command                                          | Description                                            |
-|--------------------------------------------------|--------------------------------------------------------|
+| ------------------------------------------------ | ------------------------------------------------------ |
 | `^`                                              | Una commit alla volta (all'indietro)                   |
 | `~<num>`                                         | <num> commit alla volta (all'indietro)                 |
-| `HEAD`                                           | Currently checkout commit (dov'è posizionato *)        |
+| `HEAD`                                           | Currently checkout commit (dov'è posizionato \*)       |
 | `-f`                                             | = force, reassign a branch to a commit                 |
 | `git [command1] && git [command2]`               | concatenare due comandi git                            |
 | `git pull - u [branchname] origin/[branchname] ` | Fa la pull e ricorda i parametri per la prossima volta |
@@ -254,6 +258,5 @@ _Difference between git stash pop and git stash apply_
 `gfff -n` non tagga la feature
 [https://github.com/nvie/gitflow/wiki/Command-Line-Arguments#git-flow-hotfix-finish--fsumpkn-version](https://github.com/nvie/gitflow/wiki/Command-Line-Arguments#git-flow-hotfix-finish--fsumpkn-version)
 n don't tag this release
-
 
 - remove untracked files `git clean -fd`

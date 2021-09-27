@@ -1,5 +1,7 @@
 # Env
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 ### Dot env
 
 > Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically

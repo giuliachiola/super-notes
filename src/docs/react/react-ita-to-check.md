@@ -1,5 +1,7 @@
 # React
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 ## Appunti
 
 - **render function**: dentro ad un file JS c'è un `return()` al cui interno c'è dell'HTML che viene restituito
@@ -9,10 +11,13 @@
 Commenti nelle pagine `.jsx`:
 
 ```js
-{/* Set a canonical link for every page */}
+{
+  /* Set a canonical link for every page */
+}
 ```
 
 Equivalente di `<template>` in VueJS, non esce nel markup:
+
 ```js
 <React.Fragment>
   <p>{item.label}</p>
@@ -20,17 +25,17 @@ Equivalente di `<template>` in VueJS, non esce nel markup:
 ```
 
 esce
+
 ```
 <p>{item.label}</p>
 ```
 
-- High Order Component (HOC) -> prendo un componente, lo manipolo e lo trasformo in qualcos'altro (come cloudinary su vue), nota: gli styled componente *non* sono HOC.
+- High Order Component (HOC) -> prendo un componente, lo manipolo e lo trasformo in qualcos'altro (come cloudinary su vue), nota: gli styled componente _non_ sono HOC.
 
 ## Parentesi
 
 - graffe singole `{ ... }` -> c'è del JS all'interno
 - graffe doppie `{{ ... }}` -> è un object literal passato dentro alle graffe singole `{..{ object literal }...}`
-
 
 ## Styled components
 
@@ -41,8 +46,11 @@ ${ /*  */'' }
 ```
 
 Se c'è la classe parent:
+
 ```css
-div[class^="styles__StoreLabel"] & { ... }
+div[class^="styles__StoreLabel"] & {
+  ...;
+}
 ```
 
 ### Props negli styled components
@@ -74,31 +82,33 @@ function Profile() {
 export const LabelProduct = styled.p`
   ...
 
-  ${props => {
-      if (props.customFont) {
-        return `
+  ${(props) => {
+    if (props.customFont) {
+      return `
           font-family: 'Corporate S', sans-serif;
           letter-spacing: 0.06px;
-        `
-      }
-    }};
+        `;
+    }
+  }};
 `;
 ```
 
 - esempio n.3
 
 ```js
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Sizes = styled.div`
   ....
 
-  ${ /* product page */'' }
+  ${/* product page */ ""}
 
-  ${props => (props.productPage) && css`
+  ${(props) =>
+    props.productPage &&
+    css`
     ...
   `}
-`
+`;
 ```
 
 ### Funzionamento styled components
@@ -106,12 +116,13 @@ export const Sizes = styled.div`
 - esempio n.1
 
 ```js
-<mycomponent as="button">....</mycomponent>
+<mycomponent as="button">....</mycomponent>;
 
-export const mycomponent = styled.div`.....`
+export const mycomponent = styled.div`.....`;
 ```
 
 render:
+
 ```js
 <button>tag button avrà stili mycomponent</button>
 ```
@@ -119,14 +130,19 @@ render:
 - esempio n.2
 
 ```js
-<mycomponent>....</mycomponent>
+<mycomponent>....</mycomponent>;
 
-export const Button = styled.button`color: red;`
+export const Button = styled.button`
+  color: red;
+`;
 
-export const ButtonPrimary = styled(Button)`background-color: yellow;`
+export const ButtonPrimary = styled(Button)`
+  background-color: yellow;
+`;
 ```
 
 render
+
 ```js
 <Button>tag button con stili mycomponent</Button>
 
@@ -148,7 +164,7 @@ Merge delle proprietà
 ```js
 useEffect(() => {
   // ...
-})
+});
 ```
 
 Eseguito a tutti i render dei componenti quando cambia `variable`:
@@ -159,7 +175,7 @@ useEffect((newValue, oldValue) => {
 }[variable])
 ```
 
-Se non c'è la variabile, viene eseguita *una* volta dopo il primo render, e poi non fa più niente:
+Se non c'è la variabile, viene eseguita _una_ volta dopo il primo render, e poi non fa più niente:
 
 ```js
 useEffect((newValue, oldValue) => {
@@ -176,8 +192,10 @@ useEffect((newValue, oldValue) => {
 ```
 
 Nota: gli effect sono _asincroni_ quindi se ci serve sapere a che step siamo quando abbiamo due effects:
+
 1. setto una variabile a true -> cambio il layout
 2. setto un'altra variabile a true -> ri-cambio il layout
+
 ## useLayoutEffect
 
 Viene eseguito prima della rendering pipeline.
@@ -199,12 +217,15 @@ useLayoutEffect:
 ## Context
 
 Rispettivamente in VueJS si utilizza un event bus, dove i listener lo ascoltano.
+
 ### Provider
+
 - propaga verso tutti
 - è quello che parla
 - wrapper attorno al contenuto
 
 ### Consumer
+
 - ascolta la variabile che arriva dal context
 
 ## Link onclick

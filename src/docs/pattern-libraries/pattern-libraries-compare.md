@@ -1,5 +1,7 @@
 # Pattern libraries compare
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 In comune:
 ✅sidebar componenti raggruppati atomi/elementi.. in base alle sottocartelle
 ✅render componenti
@@ -9,7 +11,9 @@ In comune:
 ![pl](uploads/337148e93bbe005c26889a587554f471/pl.png)
 
 ### PRO
-✅le varianti le genera lui: basta creare un file JSON  con lo stesso nome seguito dal modifier
+
+✅le varianti le genera lui: basta creare un file JSON con lo stesso nome seguito dal modifier
+
 ```
 button.twig
 
@@ -23,6 +27,7 @@ button~lined.json
 ✅i componenti sono fluidi, la presentation è responsive
 
 ### CONTRO
+
 ❌la barra di navigazione orizzontale in alto è scomoda
 ❌utilizza file JSON di dati, e non file JS (molto più versatile per randomizzazione, inserimento commenti, funzioni, mixin)
 ❌JSON `pages > template > organisms > elements > atoms` con il grosso limite che fa un merge quindi le proprietà di un atomo che non voglio a livello di organismo devo annullarle, e poi il JSON devo ripeterlo per ogni livello.
@@ -33,27 +38,32 @@ button~lined.json
 <hr>
 
 ## Fractal
+
 Esempio: [Emmaboshi 2019 Styleguide](http://localhost:3000/components/detail/cards-grid--default)
 
 ![fractal](uploads/c6efe0ed11a3e1be8c98677f4bc12744/fractal.png)
 
 ### PRO
+
 ✅(1) le varianti le genera lui: basta aggiungerle dentro all'array nel file `[componente].config.js`
 ✅(1) utilizza file di configurazione JS e non JSON
 ✅(2) barra di navigazione molto comoda:
- - html (compilato)
- - view (twig)
- - context (dati che vengono passati da `[componente].config.js`)
- - assets (file di documentazione, system path)
- - info (info generate da Fractal)
- - notes (note per ogni variante dentro `[componente].config.js`)
+
+- html (compilato)
+- view (twig)
+- context (dati che vengono passati da `[componente].config.js`)
+- assets (file di documentazione, system path)
+- info (info generate da Fractal)
+- notes (note per ogni variante dentro `[componente].config.js`)
 
 ✅(3) si può vedere il componente in insolation mode fuori dal frame
 ✅(4) possibilità di etichettare il componente (es. "todo", "wip", "ready")
 ✅come PL, i componenti sono fluidi, la presentation è responsive
 
 ### CONTRO
+
 ❌rigida la procedura di `include`, bisogna passargli tutte le variabili
+
 ```
 <li class="o-cardsGrid__item">
       {% render '@card' with {
@@ -78,11 +88,13 @@ Esempio: S. Guida Tv
 ![styleguidist](uploads/f0933d02e85376d969e0e6a78e5d5302/styleguidist.png)
 
 ### PRO
+
 ✅(1) cartella di documentazione generica (file markdown dentro `/docs`)
 ✅(2) searchbar per di cercare un componente per nome
 ✅(3) documentazione specifica del componente / della variante (in markdown, dentro i tag `<docs>` in JS Docs)
 
 ### CONTRO
+
 ❌non dice in automatico quale componente è incluso dentro un altro
 ❌non si riesce a taggare un componente come "Todo", "wip", "ready"
 ❌non si può vedere il componente in insolation mode fuori dal frame
@@ -93,6 +105,7 @@ Esempio: S. Guida Tv
 # Recap dei PRO
 
 _Presentation_
+
 - sidebar componenti raggruppati atomi/elementi.. in base alle sottocartelle
 - searchbar per di cercare un componente per nome
 - render componenti
@@ -102,10 +115,12 @@ _Presentation_
 - i componenti sono fluidi, la presentation è responsive
 
 _Context_
+
 - varianti generate in automatico con un file di configurazione (PL/Fractal)
 - utilizzare un file di configurazione JS e non JSON
 - scrive in automatico in quali componenti è incluso, e quali componenti include
 
 _Documentazione_
+
 - cartella di documentazione generica (file markdown dentro `/docs`)
-- documentazione specifica del componente / della variante (in markdown, dentro i tag `<docs>`  in JS Docs)
+- documentazione specifica del componente / della variante (in markdown, dentro i tag `<docs>` in JS Docs)

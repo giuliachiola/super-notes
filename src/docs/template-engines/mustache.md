@@ -1,5 +1,7 @@
 # Mustache cheatsheet
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 [Mustache cheatsheet · GitHub](https://gist.github.com/Dammmien/5f0bff8643cb931da7e9495f782aad0a)
 
 ### Basic tag
@@ -25,7 +27,6 @@
 {{/list}}
 ```
 
-
 Es: quando dobbiamo iterare su un array di stringhe, si usa la keyword di mustache `.`
 
 ```json
@@ -36,11 +37,9 @@ Es: quando dobbiamo iterare su un array di stringhe, si usa la keyword di mustac
 
 ```html
 <ul>
-{{#info.keywords}}
-<li>
-{{ . }}
-</li>
-{{/info.keywords}}
+  {{#info.keywords}}
+  <li>{{ . }}</li>
+  {{/info.keywords}}
 </ul>
 ```
 

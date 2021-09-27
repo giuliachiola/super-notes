@@ -1,4 +1,7 @@
 # Chrome
+
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 ## Cercare tra i preferiti
 
 Cercare tra i preferiti o in generale con un altro motore di ricerca dalla address bar: `chrome://settings/search`
@@ -16,13 +19,13 @@ Google Translate: [http://translate.google.it/?source=osdd#en/it/%s](http://tran
 ## Shortcuts
 
 - incognito
-On Mac: `⌘ + Shift + N`
+  On Mac: `⌘ + Shift + N`
 
 - Open Last Closed Tab
-On Mac: `⌘ + Shift + T`
+  On Mac: `⌘ + Shift + T`
 
 - Jump Between Next & Previous Tabs
-On Mac: `⌘ + Option + Right arrow` (Next open tab) and `⌘ + Option + Left arrow` (Previous open tab)
+  On Mac: `⌘ + Option + Right arrow` (Next open tab) and `⌘ + Option + Left arrow` (Previous open tab)
 
 - Open Your Downloads Page
-On Mac: `⌘ + Option + L`
+  On Mac: `⌘ + Option + L`

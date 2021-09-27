@@ -1,15 +1,19 @@
 # Javascript - ES6
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 #### async/await
-- async/await is syntactical sugar on top of generator functions which yield Promises. 
-- async and await, which make it much easier to write a series (take a mental note of that word, 'series') of asynchronous operations. 
+
+- async/await is syntactical sugar on top of generator functions which yield Promises.
+- async and await, which make it much easier to write a series (take a mental note of that word, 'series') of asynchronous operations.
 
 #### querySelector
 
 ```
 let radice = document.querySelector('.c-modal')
-radice.querySelector('.c-modal-content') 
+radice.querySelector('.c-modal-content')
 ```
+
 radice = radice da cui parto per vedere se l'altro nodo è qua dentro
 
 #### closure
@@ -38,20 +42,19 @@ Notice how we save the output of a function to a new variable. The jump function
 
 What JavaScript does is keep a reference to that original scope and we are still able to use it and the height variable. This reference is called closure.
 
-Currying is simply a way of constructing functions that allow for the partial application of a function’s arguments. In other words, a function that takes another function with multiple parameters and returns a function with fewer parameters. 
-
+Currying is simply a way of constructing functions that allow for the partial application of a function’s arguments. In other words, a function that takes another function with multiple parameters and returns a function with fewer parameters.
 
 #### Altro
 
 - Array methods can be grouped into mutator methods, accessor methods and iteration methods
+
   - Mutator methods are those methods that actually alter or modifies the array, for example, the array.push()
   - Accessor methods are those that do not alter the array but rather create an image of the array based on the effect of the method, for example array.slice()
   - Iteration methods as the name implies are used to iterate over an array while sampling the length of the array and evaluating each element of the array with a callback function as defined in the method. This includes .forEach() and .map() methods.
 
-
 - Array è un tipo di oggetto
-const a = [];
-typeof a; // returns object
+  const a = [];
+  typeof a; // returns object
 
 ### Creare un array di elementi
 
@@ -115,15 +118,17 @@ const callback = (el, index, array) => something;
 - map → entra un array di N elementi, esce un array di N elementi
 
 ```js
-const archiveList = Array(5).fill('2019').reduce((archive, year, idx) => {
-  return [
-    ...archive,
-    ...months.map((m, index) => ({
-      ...m,
-      datetime: `${year - idx}-${String(index + 1).padStart(2, '0')}`
-    }))
-  ]
-}, [])
+const archiveList = Array(5)
+  .fill("2019")
+  .reduce((archive, year, idx) => {
+    return [
+      ...archive,
+      ...months.map((m, index) => ({
+        ...m,
+        datetime: `${year - idx}-${String(index + 1).padStart(2, "0")}`,
+      })),
+    ];
+  }, []);
 ```
 
 ## Lodash merge
@@ -159,9 +164,9 @@ Queste due sintassi sono uguali
 [https://developer.mozilla.org/en-US/docs/Web/API/Console/dir](https://developer.mozilla.org/en-US/docs/Web/API/Console/dir)
 
 references:
+
 - [https://www.youtube.com/watch?v=7UstS0hsHgI&ab_channel=Avelx&t=2s](https://www.youtube.com/watch?v=7UstS0hsHgI&ab_channel=Avelx&t=2s)
 - [https://www.youtube.com/watch?v=jqU3uaRgQyQ&ab_channel=DaniKrossing](https://www.youtube.com/watch?v=jqU3uaRgQyQ&ab_channel=DaniKrossing)
-
 
 ## Proxy
 
@@ -188,7 +193,7 @@ document.removeEventListener('click', method1)
 ## Primitive
 
 > In JavaScript, a **primitive** is data that is not an object and has no methods. There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol, and null.
-> 
+>
 > All primitives are immutable.
 
 [MDN primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
@@ -196,8 +201,8 @@ document.removeEventListener('click', method1)
 ## Date
 
 ```js
-Date() // returns a string
-new Date() // returns a Date object
+Date(); // returns a string
+new Date(); // returns a Date object
 ```
 
 # `+` symbol
@@ -205,9 +210,9 @@ new Date() // returns a Date object
 The `+` operator returns the numeric representation of the object.
 
 ```js
-const a = '10'
-const b = +a
+const a = "10";
+const b = +a;
 
-console.log(b) // 10
-console.log(typeof b) // number
+console.log(b); // 10
+console.log(typeof b); // number
 ```

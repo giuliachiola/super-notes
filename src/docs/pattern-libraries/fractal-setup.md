@@ -1,7 +1,9 @@
 # Fractal setup
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 - install fractal globally `npm i -g @frctl/fractal`
-- start the project [https://fractal.build/guide/getting-started.html#the-tl-dr-method](https://fractal.build/guide/getting-started.html#the-tl-dr-method) → `fractal new <project name>` nel nostro caso vogliamo che la cartella si chiami "fractal" quindi  `[cartellaprogetto] > fractal new fractal` così crea una cartella fractal e genera un progetto da zero: (attenzione ad aggiungere `source/` sotto)
+- start the project [https://fractal.build/guide/getting-started.html#the-tl-dr-method](https://fractal.build/guide/getting-started.html#the-tl-dr-method) → `fractal new <project name>` nel nostro caso vogliamo che la cartella si chiami "fractal" quindi `[cartellaprogetto] > fractal new fractal` così crea una cartella fractal e genera un progetto da zero: (attenzione ad aggiungere `source/` sotto)
 
 ```bash
 ? What's the title of your project? Test Fractal
@@ -20,13 +22,13 @@ npm install @frctl/twig --save-dev
 
 - testare con `example.twig` se funziona tutto
 
-    ```scss
-    ├── source
-    │   ├── components
-    │   │   ├── example
-    │   │   │   └── example.config.js
-    │   │   │   └── example.twig
-    ```
+  ```scss
+  ├── source
+  │   ├── components
+  │   │   ├── example
+  │   │   │   └── example.config.js
+  │   │   │   └── example.twig
+  ```
 
 ```bash
 module.exports = {
@@ -39,19 +41,19 @@ module.exports = {
 }
 ```
 
-- aggiungere  `assets` dentro a `source`
+- aggiungere `assets` dentro a `source`
 
-    ```bash
-    ├── source
-    │   ├── assets
-    │   │   └── fonts
-    │   │   └── img
-    │   │   ├── js
-    │   │   │   └── main.js
-    │   │   └── scss
-    │   └── docs
-    │   └── components
-    ```
+  ```bash
+  ├── source
+  │   ├── assets
+  │   │   └── fonts
+  │   │   └── img
+  │   │   ├── js
+  │   │   │   └── main.js
+  │   │   └── scss
+  │   └── docs
+  │   └── components
+  ```
 
 - ^^^ chiamarlo `main.js` e non `app.js` come nello screenshot perché poi webpack il buildato lo chiama main.js di default
 - add `fractal.config.js` (o editare `fractal.js` funziona uguale)
@@ -128,35 +130,30 @@ fractal.components.set('default.preview', '@preview');
 
 - add `[README.md](http://readme.md)` file in `fractal/` folder
 
-```md
+````md
 # Fractal boilerplate
 
 This command copies all the static assets in the `public` folder, compiles all `scss` files and starts fractal with the watch command.
 
-/```bash
-npm run fractal
-/```
+/`bash npm run fractal /`
 or
-/```bash
-npm run dev
-/```
+/`bash npm run dev /`
 
 This command export all components into static HTML in the folder `build`.
-/```bash
-npm run build
-/```
-
-```
+/`bash npm run build /`
+````
 
 ## Styles
 
 sass build
 nope ~~- install node-sass `npm install --save-dev node-sass`~~
+
 ```
 npm install --save-dev sass sass-loader sass-mq
 ```
 
 nodemon
+
 ```
 npm install nodemon --save-dev
 ```
@@ -229,13 +226,13 @@ npm install nodemon --save-dev
 
 - aggiungere struttura dei template
 
-    ```scss
-    ├── components
-    │   ├── 00-design
-    │   ├── 01-components
-    │   ├── 02-pages
-    │   └── _preview.twig
-    ```
+  ```scss
+  ├── components
+  │   ├── 00-design
+  │   ├── 01-components
+  │   ├── 02-pages
+  │   └── _preview.twig
+  ```
 
 - aggiungere i template nella cartella `02-pages`
 
@@ -253,7 +250,7 @@ module.exports = {
 Aggiungere fonts:
 
 ```md
-fractal/source/components/_fonts.twig
+fractal/source/components/\_fonts.twig
 ```
 
 ```md
@@ -262,8 +259,8 @@ fractal/source/components/_fonts.twig
 <link rel="stylesheet" href="https://use.typekit.net/dpv8rmd.css">
 
 {#
-	Google Fonts
-	https://csswizardry.com/2020/05/the-fastest-google-fonts/
+Google Fonts
+https://csswizardry.com/2020/05/the-fastest-google-fonts/
 #}
 
 <link rel="preconnect"
@@ -284,15 +281,12 @@ fractal/source/components/_fonts.twig
 </noscript>
 ```
 
-+ preview
+- preview
 
 ```html
-{# Fonts #}
-{% render '@fonts' %}
-
-{# preview styles #}
-<link media="all" rel="stylesheet" href="{{ '/css/preview-style.css'|path }}">
-````
+{# Fonts #} {% render '@fonts' %} {# preview styles #}
+<link media="all" rel="stylesheet" href="{{ '/css/preview-style.css'|path }}" />
+```
 
 - aggiungere preview styles
 
@@ -315,7 +309,6 @@ npm install -D postcss postcss-cli postcss-normalize postcss-preset-env
 `components/02-pages`
 
 - se si riesce, wrappare preview page e preview dentro lo stesso file con un flag
-
 
 - nell'example.config.js definire anche le variants
 

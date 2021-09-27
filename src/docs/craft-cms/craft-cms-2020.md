@@ -1,11 +1,13 @@
 # Craft CMS 2020
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 ## Fields setup
 
 - documentazione sotto `docs/fields.md`
 - in ordine: creare fields, creare section, popolare sections con i fields, creare articoli per controllare di avere tutti i campi
 
-*Convenzioni* 
+_Convenzioni_
 
 - le global hanno prefisso `global` quindi → `globalInfo`
 - le sezioni hanno prefisso `section` quindi → `sectionAbout` , `sectionHomepage`
@@ -83,7 +85,7 @@
 - il campo si chiama `editorial`
 - bisogna creare una cartella per tutti i componenti editoriali `editorial` dove ci sarà `editorial/index.twig` (con gli if)
 - e poi gli altri componenti
-convenzioni dei campi `richText`, `figure`, (altri, es. `split`)
+  convenzioni dei campi `richText`, `figure`, (altri, es. `split`)
 
 ```jsx
 {% set styleModifier = styleModifier ?? '' %}
@@ -129,5 +131,6 @@ convenzioni dei campi `richText`, `figure`, (altri, es. `split`)
 - i template vengono caricati a runtime
 
 utenti del progetto:
-1. utenti craft (1password) 
+
+1. utenti craft (1password)
 2. db (mysql) per parlare dal pc al DB

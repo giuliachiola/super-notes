@@ -1,5 +1,7 @@
 # Nitro
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 `nitro ssh` → entra nella macchina virtuale al mount point
 `df`.
 

@@ -1,7 +1,9 @@
 # Shell
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 | Command                               | Description                                             |
-|---------------------------------------|:--------------------------------------------------------|
+| ------------------------------------- | :------------------------------------------------------ |
 | `man ls`                              | show manual for command 'ls'                            |
 | `wc <file>`                           | word count                                              |
 | `rm <file>`                           | remove/delete file                                      |
@@ -27,9 +29,10 @@
 | `cd -`                                | go to previous folder                                   |
 | `- `ll -ah`                           | show hidden files                                       |
 
-
 #### Word count
+
 - word count `wc`
+
 ```
 wc myfile.txt
 
@@ -41,8 +44,9 @@ wc myfile.txt
 57 = number of characters
 
 #### Export LESS
+
 - `export LESS=-RXF` -> se ci sta tutto in una pagina non entra esce dal LESS
-es. git diff -> se ci sta tutto non devo fare Quit
+  es. git diff -> se ci sta tutto non devo fare Quit
 
 #### Wget
 
@@ -52,8 +56,8 @@ wget --header=’referer: https://www.yumpu.com/it/embed/view/LIXgdlY7fTsU82jB' 
 
 se vuoi un PDF: `convert *.jpg corsosicurezza.pdf` da command line se hai imagemagick installato (`brew update && brew install imagemagick`)
 
-
 ### Compare componenti
+
 ```
 find src -name '*.vue' | egrep '/.+\.vue$' -o
 find src -name '*.vue' | egrep '/[^/]+\.vue$' -o | sort | uniq > componenti.txt
@@ -68,7 +72,6 @@ wc -l componenti.txt
 
 Stampa dentro un file txt la struttura delle cartelle
 `ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/' > tree.txt`
-
 
 ## Ping
 

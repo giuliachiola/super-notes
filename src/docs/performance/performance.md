@@ -1,41 +1,48 @@
 # Performance
+
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 #### Cache control
 
 `Cache-Control: max-age=600, stale-while-revalidate=30`
+
 > indicates that it is fresh for 600 seconds, and it may continue to be
-  served stale for up to an additional 30 seconds while an asynchronous
-  validation is attempted.  If validation is inconclusive, or if there
-  is not traffic that triggers it, after 30 seconds the stale-while-
-  revalidate function will cease to operate, and the cached response
-  will be "truly" stale (i.e., the next request will block and be
-  handled normally).
+> served stale for up to an additional 30 seconds while an asynchronous
+> validation is attempted. If validation is inconclusive, or if there
+> is not traffic that triggers it, after 30 seconds the stale-while-
+> revalidate function will cease to operate, and the cached response
+> will be "truly" stale (i.e., the next request will block and be
+> handled normally).
 
 #### Analysys
 
 JS
-* deferring (find “defer” in view-source)
-* concatenation (find “concat” in view-source)
-* caching (check cache-control in google dev tools)
+
+- deferring (find “defer” in view-source)
+- concatenation (find “concat” in view-source)
+- caching (check cache-control in google dev tools)
 
 CSS
-* critical css
-* concatenation (chiamate ci sono su googleDevTools e waterfall?)
-* caching (check cache-control in google dev tools)
+
+- critical css
+- concatenation (chiamate ci sono su googleDevTools e waterfall?)
+- caching (check cache-control in google dev tools)
 
 IMAGES
-* lazy loading
-* compression
-* responsiveness
-* progressive
-* caching (check cache-control in google dev tools)
 
+- lazy loading
+- compression
+- responsiveness
+- progressive
+- caching (check cache-control in google dev tools)
 
 FONT
-* subsetting
-* local storage (check if google fonts)
-* prefetching
-* font stack
-— Perché dei font non ci chiediamo se sono in cache? 
+
+- subsetting
+- local storage (check if google fonts)
+- prefetching
+- font stack
+  — Perché dei font non ci chiediamo se sono in cache?
 
 Utile:
 [Get Started with Analyzing Network Performance in Chrome DevTools  \|  Tools for Web Developers  |  Google Developers](https://developers.google.com/web/tools/chrome-devtools/network-performance/)

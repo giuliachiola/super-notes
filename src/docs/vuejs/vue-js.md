@@ -1,4 +1,7 @@
 # Vue JS
+
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 #### Props default
 
 ```
@@ -9,6 +12,7 @@ props: {
   }
 }
 ```
+
 ^^ Così passo solo il default dell’oggetto vuoto
 
 ```
@@ -22,6 +26,7 @@ props: {
   },
 }
 ```
+
 ^^ Così passo _anche_ tutti i default delle proprietà
 
 https://github.com/vuejs/vue/issues/1032#issuecomment-120212888
@@ -35,22 +40,24 @@ props: {
 }
 ```
 
----------------------------
+---
 
 ## Vue UI
 
 `vue ui`: fa partire la UI di vue cli 3 e le sue configurazioni
 `vue create my-project`: nuova sintassi per creare un progetto con vue cli 3
 
----------------------------
+---
 
 ## Nuxt
 
 _cose che ho scoperto_
+
 - non posso aprire 2 tab con due progetti e far andare entrambi con “npm run dev”
 - dentro layout/defaults.vue ci vanno le parti comuni a tutta l’app (es. header)
 - build pagine statiche --> search/michelangelo + search/giotto (array di rotte) https://nuxtjs.org/api/configuration-generate#routes
 - mettere gli head in ogni pagina
+
 ```
 export default {
   head: {
@@ -65,13 +72,15 @@ export default {
     }
 }
 ```
+
 - layout (es. dark) -> attenzione che se ne può utilizzare soltanto uno (dark fa sparire header)
 - utilizzare assets oppure static
 - error page 404 --> layouts > error.vue, entra in funzione con validation quando scrivo results/numero
 - transition -> ok, ma non si possono applicare tra differenti layout
 
 - nuxt non ha il main.js come le app vue, quindi quello che metterei nel main.js devo metterlo nei plugins (vedi veronica30)
-- nuxt arriva già con l'integrazione vue-loader per i preprocessors, quindi basta fare l'install [https://nuxtjs.org/faq/pre-processors/](https://nuxtjs.org/faq/pre-processors/) senza configurare niente su webpack  (webpack.config.js non c'è)
+- nuxt arriva già con l'integrazione vue-loader per i preprocessors, quindi basta fare l'install [https://nuxtjs.org/faq/pre-processors/](https://nuxtjs.org/faq/pre-processors/) senza configurare niente su webpack (webpack.config.js non c'è)
+
 ## Toggle state
 
 ```html
@@ -119,7 +128,6 @@ Vue i18n → modulo di traduzione
 - `$t(key)` es. `$t('place')` → conversione traduzioni
 - `$d(date)` es. `$d('2020-03-04')` → conversione date
 
-
 ## Favicon
 
 - aggiungere una emoji come favicon
@@ -128,12 +136,7 @@ Vue i18n → modulo di traduzione
 (nuxt)
 
 ```html
-link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href:
-          'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/whatsapp/238/cat-face_1f431.png',
-      },
-    ],
+link: [ { rel: 'icon', type: 'image/x-icon', href:
+'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/whatsapp/238/cat-face_1f431.png',
+}, ],
 ```

@@ -1,81 +1,90 @@
-  - aem
-    - [aem architecture](/src/docs/aem/aem-architecture.md)
-  - chrome
-    - [chrome](/src/docs/chrome/chrome.md)
-  - config
-    - [config](/src/docs/config/config.md)
-  - craft cms
-    - [craft cms 2018](/src/docs/craft-cms/craft-cms-2018.md)
-    - [craft cms 2020](/src/docs/craft-cms/craft-cms-2020.md)
-    - [nitro](/src/docs/craft-cms/nitro.md)
-  - css
-    - [css](/src/docs/css/css.md)
-    - [food colors](/src/docs/css/food-colors.md)
-  - design
-    - [sketch](/src/docs/design/sketch.md)
-  - docsify
-    - [generate automatic sidebar](/src/docs/docsify/generate-automatic-sidebar.md)
-  - git
-    - [git shortcuts](/src/docs/git/git-shortcuts.md)
-    - [git to review](/src/docs/git/git-to-review.md)
-    - [git](/src/docs/git/git.md)
-    - [gitlab colors](/src/docs/git/gitlab-colors.md)
-    - [gitlab projects migration](/src/docs/git/gitlab-projects-migration.md)
-    - [project readme](/src/docs/git/project-readme.md)
-  - html
-    - [html](/src/docs/html/html.md)
-  - images
-    - [responsive images 101](/src/docs/images/responsive-images-101.md)
-  - javascript
-    - [js es6](/src/docs/javascript/js-es6.md)
-  - mac os
-    - [mac headset](/src/docs/mac-os/mac-headset.md)
-    - [mac os](/src/docs/mac-os/mac-os.md)
-  - pattern libraries
-    - [fractal setup](/src/docs/pattern-libraries/fractal-setup.md)
-    - [pattern libraries compare](/src/docs/pattern-libraries/pattern-libraries-compare.md)
-    - [uiengine](/src/docs/pattern-libraries/uiengine.md)
-  - performance
-    - [performance](/src/docs/performance/performance.md)
-  - project management
-    - [project management](/src/docs/project-management/project-management.md)
-  - react
-    - egghead.io beginner course
-      - [intro](/src/docs/react/egghead.io-beginner-course/01-intro.md)
-      - [create element](/src/docs/react/egghead.io-beginner-course/02-create-element.md)
-      - [jsx](/src/docs/react/egghead.io-beginner-course/03-jsx.md)
-      - [fragments](/src/docs/react/egghead.io-beginner-course/04-fragments.md)
-      - [component](/src/docs/react/egghead.io-beginner-course/05-component.md)
-      - [prop types](/src/docs/react/egghead.io-beginner-course/06-prop-types.md)
-      - [jsx interpolation](/src/docs/react/egghead.io-beginner-course/07-jsx-interpolation.md)
-      - [styles](/src/docs/react/egghead.io-beginner-course/08-styles.md)
-      - [events](/src/docs/react/egghead.io-beginner-course/09-events.md)
-      - [use state](/src/docs/react/egghead.io-beginner-course/10-use-state.md)
-      - [use effect](/src/docs/react/egghead.io-beginner-course/11-use-effect.md)
-      - [ref](/src/docs/react/egghead.io-beginner-course/12-ref.md)
-      - [form event](/src/docs/react/egghead.io-beginner-course/13-form-event.md)
-      - [error boundaries](/src/docs/react/egghead.io-beginner-course/14-error-boundaries.md)
-      - [lift and colocating state](/src/docs/react/egghead.io-beginner-course/15-lift-and-colocating-state.md)
-      - [http requests](/src/docs/react/egghead.io-beginner-course/16-http-requests.md)
-    - [react ita to check](/src/docs/react/react-ita-to-check.md)
-    - [react](/src/docs/react/react.md)
-    - [storybook](/src/docs/react/storybook.md)
-  - regex
-    - [regex](/src/docs/regex/regex.md)
-  - shell
-    - [chmod](/src/docs/shell/chmod.md)
-    - [env](/src/docs/shell/env.md)
-    - [homebrew](/src/docs/shell/homebrew.md)
-    - [node](/src/docs/shell/node.md)
-    - [npm](/src/docs/shell/npm.md)
-    - [oh my zsh](/src/docs/shell/oh-my-zsh.md)
-    - [shell](/src/docs/shell/shell.md)
-  - template engines
-    - [mustache](/src/docs/template-engines/mustache.md)
-    - [nunjucks](/src/docs/template-engines/nunjucks.md)
-    - [twig](/src/docs/template-engines/twig.md)
-  - visual studio code
-    - [config](/src/docs/visual-studio-code/config.md)
-    - [shortcuts](/src/docs/visual-studio-code/shortcuts.md)
-  - vuejs
-    - [vue js](/src/docs/vuejs/vue-js.md)
+- aem
+  - [aem architecture](/src/docs/aem/aem-architecture.md)
+- chrome
+  - [chrome](/src/docs/chrome/chrome.md)
+- config
+  - [config](/src/docs/config/config.md)
+- craft cms
+  - [craft cms 2018](/src/docs/craft-cms/craft-cms-2018.md)
+  - [craft cms 2020](/src/docs/craft-cms/craft-cms-2020.md)
+  - [nitro](/src/docs/craft-cms/nitro.md)
+- css
+  - [css](/src/docs/css/css.md)
+  - [food colors](/src/docs/css/food-colors.md)
+- design
+  - [sketch](/src/docs/design/sketch.md)
+- docker
+  - [docker](/src/docs/docker/docker.md)
+- docsify
+  - [generate automatic sidebar](/src/docs/docsify/generate-automatic-sidebar.md)
+- git
+  - [git shortcuts](/src/docs/git/git-shortcuts.md)
+  - [git to review](/src/docs/git/git-to-review.md)
+  - [git](/src/docs/git/git.md)
+  - [gitlab projects migration](/src/docs/git/gitlab-projects-migration.md)
+  - [project readme](/src/docs/git/project-readme.md)
+- html
+  - [html](/src/docs/html/html.md)
+- images
+  - [responsive images 101](/src/docs/images/responsive-images-101.md)
+- javascript
+  - [js es6](/src/docs/javascript/js-es6.md)
+- mac os
+  - [mac headset](/src/docs/mac-os/mac-headset.md)
+  - [mac os](/src/docs/mac-os/mac-os.md)
+- pattern libraries
+  - [fractal setup](/src/docs/pattern-libraries/fractal-setup.md)
+  - [pattern libraries compare](/src/docs/pattern-libraries/pattern-libraries-compare.md)
+  - [uiengine](/src/docs/pattern-libraries/uiengine.md)
+- performance
+  - [performance](/src/docs/performance/performance.md)
+- project management
+  - [project management](/src/docs/project-management/project-management.md)
+- react
+  - egghead.io beginner course
+    - [intro](/src/docs/react/egghead.io-beginner-course/01-intro.md)
+    - [create element](/src/docs/react/egghead.io-beginner-course/02-create-element.md)
+    - [jsx](/src/docs/react/egghead.io-beginner-course/03-jsx.md)
+    - [fragments](/src/docs/react/egghead.io-beginner-course/04-fragments.md)
+    - [component](/src/docs/react/egghead.io-beginner-course/05-component.md)
+    - [prop types](/src/docs/react/egghead.io-beginner-course/06-prop-types.md)
+    - [jsx interpolation](/src/docs/react/egghead.io-beginner-course/07-jsx-interpolation.md)
+    - [styles](/src/docs/react/egghead.io-beginner-course/08-styles.md)
+    - [events](/src/docs/react/egghead.io-beginner-course/09-events.md)
+    - [use state](/src/docs/react/egghead.io-beginner-course/10-use-state.md)
+    - [use effect](/src/docs/react/egghead.io-beginner-course/11-use-effect.md)
+    - [ref](/src/docs/react/egghead.io-beginner-course/12-ref.md)
+    - [form event](/src/docs/react/egghead.io-beginner-course/13-form-event.md)
+    - [error boundaries](/src/docs/react/egghead.io-beginner-course/14-error-boundaries.md)
+    - [lift and colocating state](/src/docs/react/egghead.io-beginner-course/15-lift-and-colocating-state.md)
+    - [http requests](/src/docs/react/egghead.io-beginner-course/16-http-requests.md)
+  - [react ita to check](/src/docs/react/react-ita-to-check.md)
+  - [react schwarzmuller](/src/docs/react/react-schwarzmuller.md)
+  - [react](/src/docs/react/react.md)
+  - [storybook](/src/docs/react/storybook.md)
+- regex
+  - [regex](/src/docs/regex/regex.md)
+- shell
+  - [chmod](/src/docs/shell/chmod.md)
+  - [env](/src/docs/shell/env.md)
+  - [homebrew](/src/docs/shell/homebrew.md)
+  - [node](/src/docs/shell/node.md)
+  - [npm](/src/docs/shell/npm.md)
+  - [oh my zsh](/src/docs/shell/oh-my-zsh.md)
+  - [shell](/src/docs/shell/shell.md)
+- template engines
+  - [mustache](/src/docs/template-engines/mustache.md)
+  - [nunjucks](/src/docs/template-engines/nunjucks.md)
+  - [twig](/src/docs/template-engines/twig.md)
+- typescript
+  - [typescript generics](/src/docs/typescript/typescript-generics.md)
+  - [typescript project config](/src/docs/typescript/typescript-project-config.md)
+  - [typescript react](/src/docs/typescript/typescript-react.md)
+  - [typescript schwarzmuller](/src/docs/typescript/typescript-schwarzmuller.md)
+  - [typescript utility types](/src/docs/typescript/typescript-utility-types.md)
+  - [typescript](/src/docs/typescript/typescript.md)
+- visual studio code
+  - [config](/src/docs/visual-studio-code/config.md)
+  - [shortcuts](/src/docs/visual-studio-code/shortcuts.md)
+- vuejs
+  - [vue js](/src/docs/vuejs/vue-js.md)

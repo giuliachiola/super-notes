@@ -3,6 +3,7 @@
 ## Migrate projects from GitLab work account to personal account
 
 - Go to the project folder and check remote
+
 ```
 git remote -v
 ```
@@ -13,7 +14,7 @@ origin	git@gitlab.com:giuliachiola/my-workout.git (fetch)
 origin	git@gitlab.com:giuliachiola/my-workout.git (push)
 ```
 
-- Create a new GitLab project on your *personal* account
+- Create a new GitLab project on your _personal_ account
 
 https://gitlab.com/dashboard/projects > `New project` > `Create project` (create it empty!)
 
@@ -38,11 +39,13 @@ origin	git@gitlab-GMAIL:giuliach/my-workout.git (push)
 ```
 
 - Config the new email for this repository
+
 ```
-git config user.email giulia.chiola.17@gmail.com
+git config user.email [my_email]
 ```
 
 - Push all local branches
+
 ```
 git push origin --all
 ```

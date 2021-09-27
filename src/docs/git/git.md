@@ -1,4 +1,7 @@
 # Git
+
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 ## Commit message di un solo branch
 
 1. (posso essere su qualsiasi branch)
@@ -33,12 +36,12 @@ feature/168-archive-item-external-links > git cherry -v develop+ 41b471fc80c7c6a
 
 [https://regex101.com/r/QqbbOj/1](https://regex101.com/r/QqbbOj/1)
 
-----
+---
 
 ## Install a forked repo
 
 Installare da un repo forkato `npm install <ghusername>/<repoName>#branchName`
-→ [https://github.com/giuliachiola/eleventy-plugin-social-images](https://github.com/giuliachiola/eleventy-plugin-social-images) forse no! provare così: 
+→ [https://github.com/giuliachiola/eleventy-plugin-social-images](https://github.com/giuliachiola/eleventy-plugin-social-images) forse no! provare così:
 `npm install [https://github.com/giuliachiola/eleventy-plugin-social-images#feature/add-custom-selectors](https://github.com/giuliachiola/eleventy-plugin-social-images#feature/add-custom-selectors)`
 
 ## GitLab
@@ -52,7 +55,6 @@ diff tra due commit
 `git log` → guardo l'hash della commit (l'ultimo) e poi
 
 `git revert <commit hash>`
-
 
 ### Squash last commits
 

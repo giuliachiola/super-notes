@@ -1,5 +1,7 @@
 # Project management tools compared
 
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+
 ### Trello
 
 PRO
@@ -33,13 +35,15 @@ CONTRO
 ### Linear App **(nuovo)**
 
 - Linear App
-[https://linear.app/](https://linear.app/)
+  [https://linear.app/](https://linear.app/)
 
 PRO
+
 - collegato alle MR
 - issue tutte in un unico posto, divise per progetti
 - preview veloce con barra spaziatrice
 
 CONTRO
+
 - bisogna andare su GitLab per le diff del codice
 - non c'è anteprima dell'immagine come in Trello
