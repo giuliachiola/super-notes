@@ -12,7 +12,7 @@ npx create-react-app .
 
 [VSC extension](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 
-typing `rfc` this extension will write
+typing `rfc` = "react functional component" this extension will write
 
 ```js
 import React from "react";
@@ -154,3 +154,27 @@ Some sample use cases where the Context API proves helpful are:
 - Pass down current authenticated user
 
 (https://flexiple.com/react/provider-pattern-with-react-context-api/)
+
+## Hooks
+
+We can import hooks in two ways:
+
+```jsx
+import React from 'react'; // import all React library
+
+const App: React.FC = () => {
+  const [character, setCharacter] = React.useState({}) // use the hook `useState()`
+  // ....
+}
+```
+
+or
+
+```jsx
+import { useState } from 'react'; // import just the hooks you need
+
+const App: React.FC = () => {
+  const [character, setCharacter] = useState({}) // use the hook `useState()`
+  // ....
+}
+```
