@@ -1,11 +1,22 @@
 # Javascript - ES6
 
-<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
-
-#### async/await
+## `async`/`await`
 
 - async/await is syntactical sugar on top of generator functions which yield Promises.
 - async and await, which make it much easier to write a series (take a mental note of that word, 'series') of asynchronous operations.
+
+Here we have two `await` functions because JSON transformation is async
+
+```js
+fetchMovies: async (searchTerm, page) => {
+  const endpoint = searchTerm
+    ? `${SEARCH_BASE_URL}${searchTerm}&page=${page}`
+    : `${POPULAR_BASE_URL}&page=${page}`;
+  return await (await fetch(endpoint)).json();
+},
+```
+
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
 
 #### querySelector
 

@@ -178,3 +178,37 @@ const App: React.FC = () => {
   // ....
 }
 ```
+
+### `useState()`
+
+For a better usability, `useState()` values are destructured:
+
+```js
+const [age, setAge] = useState()
+```
+
+is the equivalent to
+
+```js
+const state = useState() // state = [state value, setter for the state]
+let age = state[0]
+let setAge = state[1]
+```
+
+## `dangerouslySetInnerHTML`
+
+```jsx
+// `question` arrives from API and could be e.g. `<strong>hey</strong> this is a question`
+
+<p dangerouslySetInnerHTML={{ __html: question }} />
+```
+
+## Show markup based on conditions
+
+The second operator of the ternary should be `null` = no markup output.
+
+```jsx
+{
+  isLoading? <p>Loading questions...</p> : null
+}
+```
