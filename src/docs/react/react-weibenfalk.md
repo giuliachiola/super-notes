@@ -173,3 +173,55 @@ const SearchBar = ({ setSearchTerm }) => {
   )
 }
 ```
+
+## Basic React routing using 'react-router-dom'
+
+```js
+// src/App.js
+
+import React from 'react';
+// Routing
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Pages
+import Home from './components/Home';
+import Movie from './components/Movie';
+import NotFound from './components/NotFound';
+
+const App = () => (
+  <Router>
+    {/* header is out of routing, it is present in all pages */}
+    <Header />
+
+    <Routes>
+      <Routes path='/' element={<Home />} />
+      <Routes path='/:movieId' element={<Movie />} />
+      <Routes path='/*' element={<NotFound />} />
+    </Routes>
+  </Router>
+)
+
+export default App;
+```
+
+```jsx
+// src/components/Thumb/index.js
+
+import React from "react";
+import { Link } from 'react-router-dom'
+
+const Thumb = ({ image, movieId, clickable }) => (
+  <div>
+    {
+      clickable ? (
+        <Link to={`/${movieId}`}>
+          <img src={image} alt='movie-thumb' />
+        </Link>
+      ) : (
+        <img src={image} alt='movie-thumb' />
+      )
+    }
+  </div>
+)
+
+export default Thumb
+```
