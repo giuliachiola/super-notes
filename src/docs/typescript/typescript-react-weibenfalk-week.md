@@ -4,6 +4,8 @@ From tutorial [React with Typescript Week - Weibenfalk](https://www.youtube.com/
 
 ## Functional Component (= FC)
 
+> A functional component is a function that takes props and returns JSX. They do not have state or lifecycle methods.
+
 ```jsx
 // Card.tsx
 

@@ -1,5 +1,10 @@
 # Performance
 
+## Browser Storage
+
+**Local Storage**: data persists until you decide to remove it.
+**Session Storage**: data only persists during your session. Every time you create a new session, the session storage will be wiped out.
+
 <span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
 
 #### Cache control

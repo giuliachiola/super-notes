@@ -1,5 +1,86 @@
 # Javascript - ES6
 
+## Promises
+
+```js
+let p = new Promise((resolve, reject) => {
+  let sum = 1 + 1
+  if (sum === 2) {
+    return resolve('Success') // to use a then() later we have to return it
+  } else {
+    return reject('Failed') // to use a then() later we have to return it
+  }
+})
+
+// `then()` will run only if the promise is reolved:
+
+p.then((message) => {
+  console.log(`Message: ${message}`) // 'Message: Success'
+}).catch((message) => {
+  console.log(`Catch message: ${message}`) // 'Catch message: Failed'
+})
+```
+
+### `Promise.all()`
+
+> This returned promise will resolve when all of the input's promises have resolved.
+
+[MDN - Promose.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
+
+In `then()` function it will be passed *all* resolved messages, so an array of messages:
+
+```js
+const recordVideo1 = new Promise((resolve, reject) => {
+  resolve('Video 1 Recorded')
+})
+
+const recordVideo2 = new Promise((resolve, reject) => {
+  resolve('Video 2 Recorded')
+})
+
+const recordVideo3 = new Promise((resolve, reject) => {
+  resolve('Video 3 Recorded')
+})
+
+Promise.all([
+  recordVideo1,
+  recordVideo2,
+  recordVideo3
+]).then((messages) => {
+  console.log(messages) // `['Video 1 Recorded', 'Video 2 Recorded', 'Video 3 Recorded']`
+})
+```
+
+### `Promise.race()`
+
+> The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
+
+[MDN - Promose.race()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
+
+- In `then()` function it will be passed *the single* resolved message of the first resolved promise:
+
+```js
+const recordVideo1 = new Promise((resolve, reject) => {
+  resolve('Video 1 Recorded')
+})
+
+const recordVideo2 = new Promise((resolve, reject) => {
+  resolve('Video 2 Recorded')
+})
+
+const recordVideo3 = new Promise((resolve, reject) => {
+  resolve('Video 3 Recorded')
+})
+
+Promise.race([
+  recordVideo1,
+  recordVideo2,
+  recordVideo3
+]).then((message) => {
+  console.log(message) // e.g. if the fastest is recordVideo1: `Video 1 Recorded`
+})
+```
+
 ## `async`/`await`
 
 - async/await is syntactical sugar on top of generator functions which yield Promises.
@@ -14,6 +95,46 @@ fetchMovies: async (searchTerm, page) => {
     : `${POPULAR_BASE_URL}&page=${page}`;
   return await (await fetch(endpoint)).json();
 },
+```
+
+Another example:
+- use `try`/`catch` to catch errors
+- use `await` before functions that return promises
+- use `async` before function name, because all this process is async
+
+```js
+const makeRequest = () => {
+  // this function returns a promise
+}
+
+const processRequest = () => {
+  // this function returns a promise
+}
+
+async function doStuff() {
+  try {
+    const response = await makeRequest('Google') // wait until the promise is resolved, then...
+    console.log('Response received')
+    const processedResponde = await processRequest(response) // wait until the promise is resolved, then...
+    console.log(processedResponse)
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+doStuff()
+```
+
+Write `async` functions with arrow functions notation:
+
+```js
+const fetchData = async () => {
+  try {
+    // ...
+  } catch (error) {
+    // ...
+  }
+}
 ```
 
 <span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
