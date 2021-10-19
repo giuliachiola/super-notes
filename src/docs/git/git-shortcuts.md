@@ -9,7 +9,7 @@
 | `git reset myfile.js`                                              | remove from staging area                                                                                  |
 | `git commit --amend --no-edit`                                     | amend without edit message                                                                                |
 | `git checkout -`                                                   | switch to previous branch                                                                                 |
-| `git stash -u`                                                     | stash all files (also untracked ones)                                                                     |
+| `git stash -u` or `git stash --include-untracked`                                                   | stash all files (also untracked ones)                                                                     |
 | `git reset --soft A`                                               | remove files, but still available in staging area                                                         |
 | `git reset --mixed A`                                              | `git reset A` (default) remove files also in staging area, files are available into the working directory |
 | `git reset --hard`                                                 | remove files as they never existed                                                                        |
