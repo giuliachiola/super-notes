@@ -1,14 +1,8 @@
 # npm
 
-<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
+https://giuliachiola.dev/posts/nodejs-cheatsheet/
 
-| Command                 | Description                                                                   | Alias             |
-| ----------------------- | :---------------------------------------------------------------------------- | :---------------- |
-| `npm --help`            | help di tutti i comandi                                                       |                   |
-| `npm help install`      | spiega come usare 'install' e qual è l'alias                                  |                   |
-| `npm install <package>` | spiega come usare 'install' e qual è l'alias                                  | `npm i <package>` |
-| `npm list sass-loader`  | cerca `sass-loder` nella cartella `node_modules` (anche come sottodipendenza) |
-| `npm-check -u`          | check dei pacchetti da aggiornare interattivo                                 |                   |
+<span style="display: inline-block; background: #FCFFA6; padding: 4px 16px; border-radius: 4px; color: #484848"> ⚠️ Page not updated recently</span>
 
 ```
 alias: npm i
